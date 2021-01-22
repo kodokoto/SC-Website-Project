@@ -1,5 +1,5 @@
 # SC-Website-Project
-
+![Timer](https://img.shields.io/date/1614013200?label=Turn%20In%20Time%3A)
 ### This is a website project by Jorge, Isham, Nick and Chet
 - Chet *Coenen*
 	- **ccoen001**
