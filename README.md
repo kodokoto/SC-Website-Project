@@ -2,16 +2,16 @@
 
 ### This is a website project by Jorge, Isham, Nick and Chet
 - Chet *Coenen*
-	- [**ccoen001**](ccoen001@campus.goldsmiths.ac.uk)
+	- **ccoen001**
 
 - Nicolas *Cordischi*
-	- [**ncord001**](ncord001@campus.goldsmiths.ac.uk)
+	- **ncord001**
 
 - Isham *Bengo-Cank* (Coolest)
-	- [**ibeng001**](ibeng001@campus.goldsmiths.ac.uk)
+	- **ibeng001**
 
 - Jorge *Martin Albeniz* (Cool)
-	- [**jmart023**](jmart023@campus.goldsmiths.ac.uk)
+	- **jmart023**
 
 # Vintage Computing Website (Deadline 22/02)
 This assignment will be undertaken in teams of 3 or 4 students. These teams will be confirmed during the second week by Clemence.
