@@ -24,17 +24,17 @@ Deadline is on the 22nd of February at 5 pm. One submission only per group.**
 # The brief:
  The topic of the site will be an antique computing system. Your group will be assigned a topic and a target audience from the following list:
 # Topics - Vintage computing systems:
-- Amstrad CPC
+- ~~Amstrad CPC
 - Nintendo Virtual Boy
-- IBM 7090
-- Teletext
-- Apple Newton
+- ~~IBM 7090
+- ~~Teletext
+- ~~Apple Newton
 # Target audience:
-- 8-10 years old children
-- Young adults in a museum
-- Silicon Valley entrepreneurs
+- ~~8-10 years old children
+- ~~Young adults in a museum
+- ~~Silicon Valley entrepreneurs
 - Vintage computing collectors
-- Makers/tinkerers
+- ~~Makers/tinkerers
 
 You will need to create content and design your website for your audience. This means making the information comprehensible and interesting to those people.
 
