@@ -1,0 +1,40 @@
+body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #000;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    overflow: hidden;
+}
+.grid-top, .grid-bottom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-size: 50px 50px;
+}
+.grid-top {
+    background-image: linear-gradient(0deg, transparent 19%,#FF0000 24%,#FF0000 25%,#FF0000 26%, #FF0000 27%, transparent 32%, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 19%, #FF0000 24%,#FF0000 25%,#FF0000 26%, #FF0000 27%, transparent 32%, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent);
+    transform: rotateX(-80deg) scale(2);
+    transform-origin: top center;
+    box-shadow: inset 0px -500px 500px 500px #000;
+    animation: rad 2s reverse linear infinite;
+}
+.grid-bottom {
+    background-image: linear-gradient(0deg, transparent 19%, #FF0000 24%, #FF0000 25%, #FF0000 26%, #FF0000 27%, transparent 32%, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 19%, #FF0000 24%, #FF0000 25%, #FF0000 26%, #FF0000 27%, transparent 32%, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent);
+    transform: rotateX(80deg) scale(2);
+    transform-origin: bottom center;
+    box-shadow: inset 0px 500px 500px 500px #000;
+    animation: rad 2s linear infinite;
+}
+@keyframes rad {
+    100% {
+        background-position: 0px 50px;
+   }
+}
