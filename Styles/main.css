@@ -1,3 +1,4 @@
+/* CSS for the body */
 body {
     position: static;
     top: 0;
@@ -10,6 +11,7 @@ body {
     perspective: 1000px;
     overflow: hidden;
 }
+/* This is the top grid */
 .top {
     position: absolute;
     top: 0;
@@ -24,6 +26,7 @@ body {
     box-shadow: inset 0px -500px 500px 25vw #000;
     animation: rad 2s reverse linear infinite;
 }
+/* This is the bottom grid */
 .bottom {
     position: absolute;
     top: 0;
@@ -38,6 +41,7 @@ body {
     box-shadow: inset 0px 500px 500px 25vw #000;
     animation: rad 2s linear infinite;
 }
+/* Key frame animation for grid */
 @keyframes rad {
     100% {
         background-position: 0px 50px;
