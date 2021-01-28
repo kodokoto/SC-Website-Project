@@ -1,4 +1,10 @@
-/* CSS for the body */
+@font-face {
+    font-family: 'arcadeclassicregular';
+    src: url('./fonts/arcadeclassic-webfont.woff2') format('woff2'),
+         url('./fonts/arcadeclassic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     position: static;
     top: 0;
@@ -11,7 +17,57 @@ body {
     perspective: 1000px;
     overflow: hidden;
 }
-/* This is the top grid */
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50;
+    width: 20vw;
+    z-index: 1;
+}
+.main {
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    display: block;
+    background-color: black;
+    border: #FF0000;
+    border-style: double;
+    border-width: 6;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    top: 60%;
+    transform: translateY(-50%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: ivory;
+    padding: 3vw;
+    font-family: 'arcadeclassicregular';
+}
+.main-content {
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(-50%, -50%);
+    font-size: large; 
+    color: azure;   
+}
+.navigation-box {
+    position: fixed;
+    display: block;
+    margin: auto;
+    transform: rotateY(40deg);
+    transform-origin: left center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 70%;
+    width: 300px;
+    top: 350;
+    left: 3vw;
+
+}
 .top {
     position: absolute;
     top: 0;
@@ -23,10 +79,9 @@ body {
     background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent);
     transform: rotateX(-80deg) scale(2);
     transform-origin: top center;
-    box-shadow: inset 0px -500px 500px 25vw #000;
+    box-shadow: inset 0px -500px 500px 26vw #000;
     animation: rad 2s reverse linear infinite;
 }
-/* This is the bottom grid */
 .bottom {
     position: absolute;
     top: 0;
@@ -38,10 +93,9 @@ body {
     background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent);
     transform: rotateX(80deg) scale(2);
     transform-origin: bottom center;
-    box-shadow: inset 0px 500px 500px 25vw #000;
+    box-shadow: inset 0px 500px 500px 26vw #000;
     animation: rad 2s linear infinite;
 }
-/* Key frame animation for grid */
 @keyframes rad {
     100% {
         background-position: 0px 50px;
