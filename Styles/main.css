@@ -24,6 +24,8 @@ body {
     margin-top: 50;
     width: 20vw;
     z-index: 1;
+    filter: blur(1px);
+
 }
 .main {
     width: 50vw;
@@ -48,25 +50,63 @@ body {
 }
 .main-content {
     position: absolute;
-    /* top: 50%;
-    left: 50%; */
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     font-size: large; 
     color: azure;   
 }
-.navigation-box {
+.navigation-image {
     position: fixed;
     display: block;
-    margin: auto;
     transform: rotateY(40deg);
     transform-origin: left center;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 70%;
-    width: 300px;
-    top: 350;
-    left: 3vw;
+    width: 400px;
+    top: 30%;
+    left: 1vw;
+    /* background-color: black;
+    border: #FF0000;
+    border-style: dotted;
+    border-width: 6; */
 
+}
+.navigation-box {
+    position: fixed;
+    display: block;
+    transform: rotateY(40deg);
+    transform-origin: left center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 70%;
+    width: 250px;
+    top: 40%;
+    left: 3vw;
+    filter: blur(1px);
+}
+.navigation-box a {
+    font-family: 'arcadeclassicregular';
+    font-size: 35;
+    color: #FF0000;
+    text-decoration: none;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+.navigation-box li {
+    margin: 10px 0;
+}
+.navigation-box ul {
+    padding-left: 15px;
+}
+.navigation-box li:hover {
+    list-style-image: url('./images/indicator2.png');
+    list-style-position: inside;
+    animation: blink-animation .6s steps(2, start) infinite;
 }
 .top {
     position: absolute;
