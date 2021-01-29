@@ -24,7 +24,7 @@ body {
     margin-top: 50;
     width: 20vw;
     z-index: 1;
-    filter: blur(1px);
+    filter: blur(0.5px);
 
 }
 .main {
