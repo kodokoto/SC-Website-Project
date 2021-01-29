@@ -24,7 +24,7 @@ body {
     margin-top: 50;
     width: 20vw;
     z-index: 1;
-    filter: blur(0.5px);
+    /* filter: blur(0.5px); */
 
 }
 .main {
@@ -84,7 +84,7 @@ body {
     width: 250px;
     top: 40%;
     left: 3vw;
-    filter: blur(1px);
+    /* filter: blur(1px); */
 }
 .navigation-box a {
     font-family: 'arcadeclassicregular';
@@ -94,7 +94,7 @@ body {
 }
 @keyframes blink-animation {
     to {
-        visibility: hidden;
+        opacity: 0;
     }
 }
 .navigation-box li {
@@ -106,6 +106,7 @@ body {
 .navigation-box li:hover {
     list-style-image: url('./images/indicator2.png');
     list-style-position: inside;
+    /* margin-left: 15px; */
     animation: blink-animation .6s steps(2, start) infinite;
 }
 .top {
