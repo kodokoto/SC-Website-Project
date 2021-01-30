@@ -95,6 +95,7 @@ body {
 @keyframes blink-animation {
     to {
         opacity: 0;
+        /* visibility: hidden; */
     }
 }
 .navigation-box li {
@@ -120,7 +121,7 @@ body {
     background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent);
     transform: rotateX(-80deg) scale(2);
     transform-origin: top center;
-    box-shadow: inset 0px -500px 500px 26vw #000;
+    box-shadow: inset 0px -50vh 40vmin 40vmin #000;
     animation: rad 2s reverse linear infinite;
 }
 .bottom {
@@ -134,7 +135,7 @@ body {
     background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent);
     transform: rotateX(80deg) scale(2);
     transform-origin: bottom center;
-    box-shadow: inset 0px 500px 500px 26vw #000;
+    box-shadow: inset 0px 50vh 40vmin 40vmin #000;
     animation: rad 2s linear infinite;
 }
 @keyframes rad {
