@@ -65,14 +65,15 @@ body {
     margin-bottom: auto;
     margin-right: 70%;
     width: 400px;
-    top: 30%;
-    left: 1vw;
+    top: 30vh;
+    left: 1vw; 
     /* background-color: black;
     border: #FF0000;
     border-style: dotted;
-    border-width: 6; */
+    border-width: 6;*/
 
 }
+/* navbox stuff */
 .navigation-box {
     position: fixed;
     display: block;
@@ -82,9 +83,21 @@ body {
     margin-bottom: auto;
     margin-right: 70%;
     width: 250px;
-    top: 40%;
+    top: 40vh;
     left: 3vw;
     /* filter: blur(1px); */
+}
+.navigation-box ul {
+    padding-left: 15px;
+}
+.navigation-box li {
+    margin: 10px 0;
+}
+.navigation-box li:hover {
+    list-style-image: url('./images/indicator2.png');
+    list-style-position: inside;
+    /* margin-left: 15px; */
+    animation: blink-animation .6s steps(2, start) infinite;
 }
 .navigation-box a {
     font-family: 'arcadeclassicregular';
@@ -98,18 +111,9 @@ body {
         /* visibility: hidden; */
     }
 }
-.navigation-box li {
-    margin: 10px 0;
-}
-.navigation-box ul {
-    padding-left: 15px;
-}
-.navigation-box li:hover {
-    list-style-image: url('./images/indicator2.png');
-    list-style-position: inside;
-    /* margin-left: 15px; */
-    animation: blink-animation .6s steps(2, start) infinite;
-}
+
+/* grid stuff */
+
 .top {
     position: absolute;
     top: 0;
@@ -144,4 +148,10 @@ body {
    }
 }
 
-/* helloooo */
+/* media queries */
+
+@media only screen and (max-width: 600px) {
+    #main {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
