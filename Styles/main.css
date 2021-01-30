@@ -37,7 +37,7 @@ body {
     border-style: double;
     border-width: 6;
     overflow: auto;
-    margin-left: auto;
+    margin-left: 30vw;
     margin-right: auto;
     top: 60%;
     transform: translateY(-50%);
@@ -105,13 +105,28 @@ body {
     color: #FF0000;
     text-decoration: none;
 }
-@keyframes blink-animation {
+/* @keyframes blink-animation {
     to {
         opacity: 0;
-        /* visibility: hidden; */
+    }
+} */
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+    }
+    
+    49% {
+        opacity: 1;
+    }
+    
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
-
 /* grid stuff */
 
 .top {
@@ -150,8 +165,9 @@ body {
 
 /* media queries */
 
-@media only screen and (max-width: 600px) {
-    #main {
-        font-family: Arial, Helvetica, sans-serif;
+@media only screen and (max-width: 900px) {
+    .main {
+        margin-left: 300px;
+        /* display: none; */
     }
 }
