@@ -24,9 +24,8 @@ body {
     margin-top: 50;
     width: 20vw;
     z-index: 1;
-    /* filter: blur(0.5px); */
-
 }
+/* old main */
 .main {
     width: 50vw;
     height: 50vh;
@@ -56,42 +55,35 @@ body {
     font-size: large; 
     color: azure;   
 }
+/* menu navbar */
+/* background image of the menu */
 .navigation-image {
     position: fixed;
     display: block;
-    transform: rotateY(40deg);
     transform-origin: left center;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 70%;
-    width: 400px;
-    top: 30vh;
-    left: 1vw; 
-    /* background-color: black;
-    border: #FF0000;
-    border-style: dotted;
-    border-width: 6;*/
-
+    width: 275px;
+    top: 50%;
+    left: 3vw; 
+    transform: translate(0, -50%) rotateY(40deg);
 }
-/* navbox stuff */
+/* menu list */
 .navigation-box {
     position: fixed;
     display: block;
-    transform: rotateY(40deg);
-    transform-origin: left center;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 70%;
     width: 250px;
-    top: 40vh;
+    top: 50%;
     left: 3vw;
-    /* filter: blur(1px); */
+    transform: translate(0, -50%) rotateY(40deg);
+    padding-left: 15px; 
+    padding-bottom: 25px;
+    transform-origin: left center;
 }
 .navigation-box ul {
     padding-left: 15px;
 }
 .navigation-box li {
     margin: 10px 0;
+    list-style-type: none;
 }
 .navigation-box li:hover {
     list-style-image: url('./images/indicator2.png');
@@ -105,11 +97,7 @@ body {
     color: #FF0000;
     text-decoration: none;
 }
-/* @keyframes blink-animation {
-    to {
-        opacity: 0;
-    }
-} */
+
 @keyframes blink-animation {
     0% {
         opacity: 1;
@@ -165,9 +153,12 @@ body {
 
 /* media queries */
 
-@media only screen and (max-width: 900px) {
-    .main {
-        margin-left: 300px;
-        /* display: none; */
+@media only screen and (max-height: 700px) {
+    .navigation-box {
+    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+   
+    }
+    .navigation-image {
+    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
     }
 }
