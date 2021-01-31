@@ -25,37 +25,9 @@ body {
     width: 20vw;
     z-index: 1;
 }
-/* old main */
-.main {
-    width: 50vw;
-    height: 50vh;
-    position: relative;
-    display: block;
-    background-color: black;
-    border: #FF0000;
-    border-style: double;
-    border-width: 6;
-    overflow: auto;
-    margin-left: 30vw;
-    margin-right: auto;
-    top: 60%;
-    transform: translateY(-50%);
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: ivory;
-    padding: 3vw;
-    font-family: 'arcadeclassicregular';
-}
-.main-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: large; 
-    color: azure;   
-}
+
 /* menu navbar */
+
 /* background image of the menu */
 .navigation-image {
     position: fixed;
@@ -85,6 +57,7 @@ body {
     margin: 10px 0;
     list-style-type: none;
 }
+/* this adds blink animation and finger at hover */
 .navigation-box li:hover {
     list-style-image: url('./images/indicator2.png');
     list-style-position: inside;
@@ -115,7 +88,7 @@ body {
         opacity: 0;
     }
 }
-/* grid stuff */
+/* grid animation */
 
 .top {
     position: absolute;
@@ -162,3 +135,34 @@ body {
     transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
     }
 }
+
+/* old main */
+/* .main {
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    display: block;
+    background-color: black;
+    border: #FF0000;
+    border-style: double;
+    border-width: 6;
+    overflow: auto;
+    margin-left: 30vw;
+    margin-right: auto;
+    top: 60%;
+    transform: translateY(-50%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: ivory;
+    padding: 3vw;
+    font-family: 'arcadeclassicregular';
+}
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: large; 
+    color: azure;   
+} */
