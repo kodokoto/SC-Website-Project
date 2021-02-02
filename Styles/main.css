@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'arcadeclassicregular';
+    src: url('./fonts/arcadeclassic-webfont.woff2') format('woff2'),
+         url('./fonts/arcadeclassic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    position: static;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #000;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    overflow: hidden;
+}
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50;
+    width: 20vw;
+    z-index: 1;
+}
+
+/* menu navbar */
+
+/* background image of the menu */
+.navigation-image {
+    position: fixed;
+    display: block;
+    transform-origin: left center;
+    width: 275px;
+    top: 50%;
+    left: 3vw; 
+    transform: translate(0, -50%) rotateY(40deg);
+}
+/* menu list */
+.navigation-box {
+    position: fixed;
+    display: block;
+    width: 250px;
+    top: 50%;
+    left: 3vw;
+    transform: translate(0, -50%) rotateY(40deg);
+    padding-left: 15px; 
+    padding-bottom: 25px;
+    transform-origin: left center;
+}
+.navigation-box ul {
+    padding-left: 15px;
+}
+.navigation-box li {
+    margin: 10px 0;
+    list-style-type: none;
+}
+/* this adds blink animation and finger at hover */
+.navigation-box li:hover {
+    list-style-image: url('./images/indicator2.png');
+    list-style-position: inside;
+    /* margin-left: 15px; */
+    animation: blink-animation .6s steps(2, start) infinite;
+}
+.navigation-box a {
+    font-family: 'arcadeclassicregular';
+    font-size: 35;
+    color: #FF0000;
+    text-decoration: none;
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+    }
+    
+    49% {
+        opacity: 1;
+    }
+    
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+/* grid animation */
+
+.top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-size: 50px 50px;
+    background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent);
+    transform: rotateX(-80deg) scale(2);
+    transform-origin: top center;
+    box-shadow: inset 0px -50vh 40vmin 40vmin #000;
+    animation: rad 2s reverse linear infinite;
+}
+.bottom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-size: 50px 50px;
+    background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent);
+    transform: rotateX(80deg) scale(2);
+    transform-origin: bottom center;
+    box-shadow: inset 0px 50vh 40vmin 40vmin #000;
+    animation: rad 2s linear infinite;
+}
+@keyframes rad {
+    100% {
+        background-position: 0px 50px;
+   }
+}
+
+/* media queries */
+
+@media only screen and (max-height: 700px) {
+    .navigation-box {
+    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+   
+    }
+    .navigation-image {
+    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+    }
+}
+
+/* old main */
+/* .main {
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    display: block;
+    background-color: black;
+    border: #FF0000;
+    border-style: double;
+    border-width: 6;
+    overflow: auto;
+    margin-left: 30vw;
+    margin-right: auto;
+    top: 60%;
+    transform: translateY(-50%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: ivory;
+    padding: 3vw;
+    font-family: 'arcadeclassicregular';
+}
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: large; 
+    color: azure;   
+} */
