@@ -59,7 +59,7 @@ body {
 }
 /* this adds blink animation and finger at hover */
 .navigation-box li:hover {
-    list-style-image: url('./images/indicator2.png');
+    list-style-image: url('./images/indicator.png');
     list-style-position: inside;
     /* margin-left: 15px; */
     animation: blink-animation .6s steps(2, start) infinite;
