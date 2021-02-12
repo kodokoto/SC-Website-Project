@@ -136,33 +136,25 @@ body {
     }
 }
 
-/* old main */
-/* .main {
-    width: 50vw;
-    height: 50vh;
-    position: relative;
+.main-content {
+    position: fixed;
     display: block;
-    background-color: black;
-    border: #FF0000;
-    border-style: double;
-    border-width: 6;
-    overflow: auto;
-    margin-left: 30vw;
-    margin-right: auto;
-    top: 60%;
-    transform: translateY(-50%);
+    top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    color: ivory;
-    padding: 3vw;
-    font-family: 'arcadeclassicregular';
+    width: 70%;
+    height: 60%;
+    border-color: red;
+    border-style: double;
+    transform: translate(30%, 45%);
+    transform-origin: top;
+    background-color: black;
+    overflow: scroll;
+    
 }
-.main-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: large; 
-    color: azure;   
-} */
+.main-content img {
+    background-size: contain;
+    border-radius: 25%;
+}
+
