@@ -154,8 +154,22 @@ body {
 }
 .news {
     position: relative;
-    border: green;
+    border: maroon;
     border-style: solid;
-    margin: 10%;
-    color: green;
+    margin: 2%;
+    height: 30%;
+    width: 95%;
+}
+.news-headline {
+    color: red;
+    width: 78%;
+}
+.news-img {
+    position: relative;
+    width: 18%;
+}
+.news-article {
+    position: relative;
+    color: red;
+    width: 78%;
 }
