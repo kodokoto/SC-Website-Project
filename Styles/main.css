@@ -159,17 +159,21 @@ body {
     margin: 2%;
     height: 30%;
     width: 95%;
+    display: grid;
+    grid-template-rows: 30% 30% 30% 30%;
+    grid-template-columns: 70% 30%;
+    grid-gap: 1%;
 }
 .news-headline {
+    position: relative;
     color: red;
     width: 78%;
-}
-.news-img {
-    position: relative;
-    width: 18%;
 }
 .news-article {
     position: relative;
     color: red;
     width: 78%;
+}
+.news-img {
+    position: relative;
 }
