@@ -151,5 +151,5 @@ body {
     transform: translate(30%, 45%);
     transform-origin: top;
     background-color: black;
-    overflow: hidden;
+    overflow: scroll;
 }
