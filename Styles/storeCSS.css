@@ -1,0 +1,177 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  display         : flex;
+  justify-content: center;
+}
+
+/* Style the Body */
+body {
+  flex-direction  : column;
+  margin          : 0;
+  overflow        : hidden;
+  perspective     : 1000px;
+  transform-style : preserve-3d;
+
+}
+
+/* Header formating */
+header {
+  background-image : linear-gradient(
+                       0deg,
+                       transparent 69%,
+                       #FF0000 74%,
+                       #FF0000 75%,
+                       #FF0000 76%,
+                       #FF0000 77%,
+                       transparent 82%,
+                       transparent
+                     ),
+                     linear-gradient(
+                       90deg,
+                       transparent 69%,
+                       #FF0000 74%,
+                       #FF0000 75%,
+                       #FF0000 76%,
+                       #FF0000 77%,
+                       transparent 82%,
+                       transparent
+                     );
+  box-shadow       : inset 0px -50vh 40vmin 40vmin #000;
+  background-size  : 50px 50px;
+  animation        : rad 2s reverse linear infinite;
+  transform        : rotateX(-80deg) scale(2);
+  transform-origin : top center;
+}
+
+header img{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+
+}
+
+/* Style the top navigation bar */
+navbar {
+  transform        : translate(0, -50%) rotateY(40deg);
+  transform-origin : left center;
+}
+
+/* Style the top navigation bar */
+navbar img {
+  top              : 50%;
+  left             : 3vw;
+  width            : 275px;
+  transform        : translate(0, -50%) rotateY(40deg);
+  transform-origin : left center;
+}
+
+navbar ul{
+}
+
+navbar li{
+  margin          : 10px 0;
+  list-style-type : none;
+}
+
+/* this adds blink animation and finger at hover */
+
+navbar li:hover {
+  list-style-image    : url('./images/indicator.png');
+  list-style-position : inside;
+  animation           : blink-animation .6s steps(2, start) infinite;
+  /* margin-left: 15px; */
+}
+
+/* Style the navigation bar links */
+navbar a {
+  color           : #FF0000;
+  text-decoration : none;
+  font-family     : 'arcadeclassicregular',
+                    '';
+  font-size       : 35px;
+}
+
+/* Change color on hover */
+
+navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Main column */
+main {
+  background-color: white;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  position: sticky;
+  background-image : linear-gradient(
+                       0deg,
+                       transparent 69%,
+                       #FF0000 74%,
+                       #FF0000 75%,
+                       #FF0000 76%,
+                       #FF0000 77%,
+                       transparent 82%,
+                       transparent
+                     ),
+                     linear-gradient(
+                       90deg,
+                       transparent 69%,
+                       #FF0000 74%,
+                       #FF0000 75%,
+                       #FF0000 76%,
+                       #FF0000 77%,
+                       transparent 82%,
+                       transparent
+                     );
+  background-size  : 50px 50px;
+  box-shadow       : inset 0px 50vh 40vmin 40vmin #000;
+  animation        : rad 2s linear infinite;
+  transform        : rotateX(80deg) scale(2);
+  transform-origin : bottom center;
+  bottom: 0;
+}
+
+
+@@font-face {
+  font-family : 'arcadeclassicregular';
+  font-style  : normal;
+  font-weight : normal;
+  src         : url('./fonts/arcadeclassic-webfont.woff2') format('woff2'),
+                url('./fonts/arcadeclassic-webfont.woff') format('woff');
+}
+
+@media
+  only screen
+  and (max-height : 700px) {
+  .navigation-box {
+    transform : translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+  }
+
+  .navigation-image {
+    transform : translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+  }
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity : 1;
+  }
+
+  49% {
+    opacity : 1;
+  }
+
+  50% {
+    opacity : 0;
+  }
+
+  100% {
+    opacity : 0;
+  }
+}
