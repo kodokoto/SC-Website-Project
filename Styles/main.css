@@ -153,8 +153,10 @@ body {
     overflow: scroll;
     padding-bottom: 0px;
 }
-.main-content img {
+.images {
+    position: relative;
     background-size: contain;
     border-radius: 25%;
+    /* vh vw % */
 }
 
