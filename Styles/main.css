@@ -166,9 +166,9 @@ body {
 .news-text {
     position: relative;
     color: red;
-    width: 78%;
+    width: 90%;
     grid-column-start: 1;
-    padding: 2%;
+    padding: 1%;
 }
 .news-img {
     position: relative;
