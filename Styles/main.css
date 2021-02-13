@@ -151,7 +151,7 @@ body {
     transform-origin: top;
     background-color: black;
     overflow: scroll;
-    
+    padding-bottom: 0px;
 }
 .main-content img {
     background-size: contain;
