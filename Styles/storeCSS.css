@@ -13,7 +13,8 @@ body {
   overflow        : hidden;
   perspective     : 1000px;
   transform-style : preserve-3d;
-
+  width: 100vmin;
+  height: 100vmin;
 }
 
 /* Header formating */
@@ -46,9 +47,12 @@ header {
 }
 
 header img{
+  height: 3
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
+  width: 50vmin;
+  height: auto;
 
 }
 
