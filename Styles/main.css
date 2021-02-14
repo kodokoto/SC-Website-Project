@@ -163,7 +163,6 @@ body {
 
 .exchange-main h1 {
     margin: 10px;
-    width: 70%;
 }
 
 .exchange-main a {
@@ -178,38 +177,47 @@ body {
 
 .post {
     position: relative;
-    margin: 2%;
-    border: red;
-    border-style: dotted;
+    padding: 2%;
     height: fit-content;
     /* overflow: hidden; */
     width: auto;
+    border-bottom: dotted red;
+
+}
+.post-main {
+    /* border: red; */
+    /* border-style: dotted; */
+    width: 60%;
+
 }
 
-.text a img {
-    position: fixed;
+.post img {
+    position: absolute;
+    border: red;
+    border-style: double;
+    left: 60%;
+    max-width:38%;
+    max-height:90%;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+}
+ /* .text a img {
+    position: relative;
     top: 0;
-    left: 0;
-    margin-top: auto;
-    margin-bottom: auto;
+    left: 60%;
+    margin: 2%;
     background: black;
     border:red;
-    border-style: dotted;
-    padding: 10px;
-    width: 300px;
+    border-style: double;
+    padding: 0;
     height: auto;
     visibility: hidden;
     opacity: 0;
+} */
 
-    /* height: 30%;
-    width: 30%; */
-    /* width: min-content; */
-}
-
-.text a:hover img{
-    visibility: visible;
-    opacity: 1;
-}
 
 .info {
     padding: 0;
@@ -230,6 +238,5 @@ body {
 .text {
     color: white;
     padding: 10px;
-    width: 70%;
 }
 
