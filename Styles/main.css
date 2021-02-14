@@ -100,6 +100,43 @@ body {
         opacity: 0;
     }
 }
+@keyframes help-animation {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    
+    80% {
+        opacity: 0.2;
+    }
+    90% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
 /* grid animation */
 
 .top {
@@ -173,7 +210,7 @@ body {
     height: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     color: wheat;
 }
 /* .timeline {
@@ -231,20 +268,30 @@ body {
 }
 
 .event {
-    position: absolute;
-    bottom: 55px;
-    height: 500px;
-    width: 400px;
+    position: fixed;
+    /* display: inline-block; */
+    /* bottom: 55px; */
+    height: 50%;
+    width: auto;
     background: black;
     padding: 20px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     visibility: hidden;
     border: red;
     border-style: solid;
     border-radius: 4px;
     opacity: 0;
     transition: 0.5s;
-    text-align: left;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 2%;
+
+}
+.event p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .event-tag {
@@ -268,7 +315,7 @@ ul li:hover .event {
     font-family: 'arcadeclassicregular';
     font-size: 70;
     color: #FF0000;
-    animation: blink-animation 1s steps(2, start) infinite;
+    animation: help-animation 1s steps(2, start) infinite;
     /* top: 80%; */
     transform: translateY(-15%);
     width: 100%;
