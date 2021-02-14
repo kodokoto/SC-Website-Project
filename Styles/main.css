@@ -153,3 +153,83 @@ body {
     background-color: black;
     overflow: scroll;
 }
+
+.exchange-main {
+    position: relative;
+    margin: 1%;
+    border:#FF0000;
+    /* border-style: double; */
+}
+
+.exchange-main h1 {
+    margin: 10px;
+    width: 70%;
+}
+
+.exchange-main a {
+    text-decoration: none;
+    color: red;
+    transition: 0.5s;
+}
+
+.exchange-main a:hover {
+    color: white;
+}
+
+.post {
+    position: relative;
+    margin: 2%;
+    border: red;
+    border-style: dotted;
+    height: fit-content;
+    /* overflow: hidden; */
+    width: auto;
+}
+
+.text a img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: black;
+    border:red;
+    border-style: dotted;
+    padding: 10px;
+    width: 300px;
+    height: auto;
+    visibility: hidden;
+    opacity: 0;
+
+    /* height: 30%;
+    width: 30%; */
+    /* width: min-content; */
+}
+
+.text a:hover img{
+    visibility: visible;
+    opacity: 1;
+}
+
+.info {
+    padding: 0;
+    height: 10px;
+}
+.info ul {
+    padding-left: 0;
+    margin: 10px;
+    list-style: circle;
+}
+.info ul li{
+    display: inline-block;
+    /* width: 100%;
+    height: 100%; */
+    color: white;
+}
+
+.text {
+    color: white;
+    padding: 10px;
+    width: 70%;
+}
+
