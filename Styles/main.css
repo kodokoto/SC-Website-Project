@@ -299,7 +299,7 @@ ul li:hover .event {
 .help-sign {
     position: relative;
     font-family: 'arcadeclassicregular';
-    font-size: 70;
+    font-size: 4vw;
     color: #FF0000;
     animation: help-animation 1s steps(2, start) infinite;
     transform: translateY(-15%);
