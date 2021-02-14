@@ -155,8 +155,8 @@ body {
 }
 
 /* timeline */
-
-/* .timeline {
+/* 
+.timeline {
     width: 100%;
     height: 100%;
     overflow-x: scroll;
@@ -167,43 +167,50 @@ body {
 .timeline {
     display: flex;
     flex-wrap: nowrap;
-    overflow-y: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     width: 100%;
     height: 100%;
 }
 
 .timeline-bar {
-    position: relative;
+    position: absolute;
     /* flex: 0 0 auto; */
-    height: 4000px;
-    width: 10px;
+    width: 4000px;
+    height: 10px;
     background: red;
     margin-top: auto;
     margin-bottom: auto;
-    right: 50%;
+    top: 70%;
+    
 }
 
 
 .timeline ul {
     margin: 0;
-    padding: 400px;
-    display: block;
-
+    /* white-space:nowrap; */
+    display: flex;
+    position: relative;
+    bottom: 50%;
+    
+    /* margin-top: 69%; */
+    /* margin-top: 13% */
 }
 
 .timeline ul li {
-    /* display: block; */
+    display: block;
     position: relative;
     list-style: none;
     width: 20px;
     height: 20px;
-    background: gray;
+    background: red;
     margin: 0 20px;
     border-radius: 50%;
     transition: 0.5s;
     cursor: pointer;
     color: white;
     margin-bottom: 30px;
+    margin-right: 100px;
 }
 .timeline ul li:hover {
     background: red;
@@ -218,15 +225,38 @@ ul li .event {
     padding: 20px;
     box-sizing: border-box;
     visibility: hidden;
-    opacity: 0;
-    transition: 0.5s;
-}
-ul li:hover .event {
-    visibility: visible;
-    opacity: 1;
     border: red;
     border-style: solid;
     border-radius: 4px;
+    opacity: 0;
+    transition: 0.5s;
+}
 
+.event-tag {
+    position: relative;
+    font-family: 'arcadeclassicregular';
+    font-size: 20;
+    color: #FF0000;
+    top: 30px;
+    transform: translateX(-10px);
+    text-align: center;
+}
 
+ul li:hover .event {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.help-sign {
+    position: relative;
+    font-family: 'arcadeclassicregular';
+    font-size: 70;
+    color: #FF0000;
+    animation: blink-animation 1s steps(2, start) infinite;
+    /* top: 80%; */
+    transform: translateY(85%);
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
