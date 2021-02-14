@@ -5,6 +5,13 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'virtual_logoregular';
+    src: url('./fonts/virtual_logo-webfont.woff2') format('woff2'),
+         url('./fonts/virtual_logo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     position: static;
     top: 0;
@@ -172,7 +179,9 @@ body {
     transform: translateY(-3vh);
     top: 0;
     color: white;
-    
+    font-family: 'arcadeclassicregular';
+    letter-spacing: 2px;
+
 }
 .news-img {
     position: absolute;
@@ -195,3 +204,4 @@ body {
     overflow: hidden;
     font-size: 15;
     color: white;
+}
