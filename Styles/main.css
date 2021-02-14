@@ -143,8 +143,8 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    width: 70%;
-    height: 60%;
+    width: 70vw;
+    height: 60vh;
     border: red;
     border-style: double;
     /* border-width: 10px; */
