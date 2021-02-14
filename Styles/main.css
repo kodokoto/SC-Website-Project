@@ -307,3 +307,20 @@ ul li:hover .event {
     height: 100%;
     text-align: center;
 }
+
+.line {
+    position: absolute;
+    width: 3px;
+    height: 5vh;
+    background: #FF0000;
+    transform: translate(8px, -5vh);
+    visibility: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+ul li:hover .line {
+    visibility: visible;
+    opacity: 1;
+}
+
