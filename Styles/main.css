@@ -145,23 +145,29 @@ body {
     left: 0;
     width: 70%;
     height: 60%;
-    border-color: red;
-    border-style: double;
+    border-radius: 10%;
     transform: translate(30%, 45%);
     transform-origin: top;
     background-color: black;
     overflow: scroll;
+    box-shadow: 15px 15px 1px 10px black;
+    
     
 }
-.images {
-    
+/*images editing*/
+.images img {
     position: relative;
-    background-size: contain;
-    border-radius: 20%;
     flex-shrink: inherit;
-    width: 100%;
-    height: 100%;
+    border-radius: 23%;
+    width: 49%;
+    height: 94%; 
     
-    /* vh vw % */
+     
+}
+.images div {
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-bottom: 3%;
+    margin-right: 3%;
 }
 
