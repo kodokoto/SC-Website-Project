@@ -16,6 +16,7 @@ body {
     transform-style: preserve-3d;
     perspective: 1000px;
     overflow: hidden;
+
 }
 .logo {
     display: block;
@@ -150,10 +151,11 @@ body {
     transform-origin: top;
     background-color: black;
     overflow: scroll;
-    box-shadow: 15px 5px 25px 15px black;
-    
-    
+    box-shadow: 15px 5px 25px 15px black;    
 }
+.main-content::-webkit-scrollbar {
+    display: none;
+  }
 /*images editing*/
 .images img {
     position: relative;
