@@ -153,9 +153,13 @@ body {
     overflow: scroll;
     box-shadow: 15px 5px 25px 15px black;    
 }
+
+/* remove scrollbar */
+
 .main-content::-webkit-scrollbar {
     display: none;
   }
+
 /*images editing*/
 .images img {
     position: relative;
