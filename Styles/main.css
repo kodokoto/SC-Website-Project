@@ -5,6 +5,20 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'ds_bios';
+    src: url('./fonts/nintendo-ds-bios-webfont.woff2') format('woff2'),
+         url('./fonts/nintendo-ds-bios-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'retro_gaming';
+    src: url('./fonts/retro_gaming-webfont.woff2') format('woff2'),
+         url('./fonts/retro_gaming-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     position: static;
     top: 0;
@@ -145,15 +159,16 @@ body {
     left: 0;
     width: 70vw;
     height: 60vh;
-    border: red;
-    border-style: double;
-    /* border-width: 10px; */
+    /* border: red;
+    border-style: double; */
     transform: translate(30%, 45%);
     transform-origin: top;
     background-color: black;
     overflow: scroll;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 .exchange-main {
     position: relative;
     margin: 1%;
@@ -161,27 +176,29 @@ body {
     /* border-style: double; */
 }
 
-.exchange-main h1 {
+.post h1 {
     margin: 10px;
+    font-family: 'retro_gaming';
 }
 
-.exchange-main a {
+.post a {
     text-decoration: none;
     color: red;
     transition: 0.5s;
 }
 
-.exchange-main a:hover {
-    color: white;
+.post a:hover {
+    animation: blink-animation .6s steps(2, start) infinite;
 }
 
 .post {
     position: relative;
-    padding: 2%;
+    margin: 1%;
+    padding: 1%;
     height: fit-content;
-    /* overflow: hidden; */
     width: auto;
-    border-bottom: dotted red;
+    border-bottom: solid maroon;
+    border-top: solid maroon;
 
 }
 .post-main {
@@ -204,20 +221,11 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
- /* .text a img {
-    position: relative;
-    top: 0;
-    left: 60%;
-    margin: 2%;
-    background: black;
-    border:red;
-    border-style: double;
-    padding: 0;
-    height: auto;
-    visibility: hidden;
-    opacity: 0;
-} */
-
+.post:hover{
+    transform: scale(1.02);
+    border-color: red;
+    animation: border-blink .6s steps(2, start) infinite;
+}
 
 .info {
     padding: 0;
@@ -238,5 +246,6 @@ body {
 .text {
     color: white;
     padding: 10px;
+    font-family: 'ds_bios';
 }
 
