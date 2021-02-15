@@ -177,6 +177,9 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
+.news-content {
+    box-shadow: 15px 15px 1px 10px black;
+}
 .news {
     position: relative;
     /* border: maroon; */
@@ -187,6 +190,7 @@ body {
     height: fit-content;
     width: auto;
     padding: 1%;
+
 }
 .news:hover{
     transform: scale(1.02);
