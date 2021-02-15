@@ -230,8 +230,8 @@ body {
     position: absolute;
     width: auto;
     height: 85%;
-    border: red;
-    border-style: double;
+    /* border: red;
+    border-style: double; */
     top: 0%;
     left: 70%;
     margin: 1%;
