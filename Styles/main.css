@@ -170,7 +170,7 @@ body {
     display: none;
 }
 
-#exchange .main-content {
+#resources .main-content {
     width: 50vw;
     transform: translate(50%, 45%);
     box-shadow: 0px 0px 30px 30px black;
@@ -182,7 +182,7 @@ body {
     border:#FF0000;
 }
 
-.post {
+.segment {
     position: relative;
     margin: 1%;
     padding: 1%;
@@ -196,27 +196,27 @@ body {
 /* forced to use transition because keyframes cant have reverse animation on mouse out, and it looks janky */
 /* refresh bug is still there, but it doesnt look too bad */
 
-.post:hover{
+.segment:hover{
     transform: scale(1.02);
     border-color: red;
 }
 
-.post h1 {
+.segment h1 {
     margin: 10px;
     width: 50%;
 }
 
-.post a:link, a:visited {
+.segment a:link, a:visited {
     text-decoration: none;
     color: red;
     font-family: 'retro_gaming';
 }
 
-.post h1:hover {
+.segment h1:hover {
     animation: blink-animation .6s steps(2, start) infinite;
 }
 
-.post img {
+.segment img {
     position: absolute;
     left: 60%;
     max-height:85%;
@@ -227,30 +227,6 @@ body {
     margin-right: auto;
 }
 
-.info {
-    padding: 0;
-    height: 10px;
-    font-family: "ds_bios";
-}
-.info ul {
-    padding-left: 0;
-    margin: 10px;
-}
-.info ul li{
-    display: inline-block;
-    color: white;
-    list-style-type: disc;
-
-}
-
-
-.info a {
-    font-size: 12px;
-}
-
-.info a:hover {
-    animation: white-fade 0.5s linear forwards;
-}
 
 /* have to use keyframes ove transition because transiotion hasa reload bug that cant be fixed without using js */
 @keyframes white-fade {
@@ -262,7 +238,7 @@ body {
     }
 }
 
-.text {
+#resources.text {
     color: white;
     padding: 10px;
     font-family: 'ds_bios';
