@@ -26,7 +26,7 @@ body {
     bottom: 0;
     left: 0;
     margin: auto;
-    background: #000;
+    background: black;
     transform-style: preserve-3d;
     perspective: 1000px;
     overflow: hidden;
@@ -83,8 +83,8 @@ body {
     font-size: 25;
     color: #FF0000;
     text-decoration: none;
-    top:-5px; 
-    position:relative;;
+    position: relative;
+    top: -1px; /* this centers the text with the indicator vertically */
 }
 
 @keyframes blink-animation {
@@ -117,7 +117,7 @@ body {
     background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent);
     transform: rotateX(-80deg) scale(2);
     transform-origin: top center;
-    box-shadow: inset 0px -50vh 40vmin 40vmin #000;
+    box-shadow: inset 0px -50vh 40vmin 40vmin black;
     animation: rad 2s reverse linear infinite;
 }
 .bottom {
@@ -131,7 +131,7 @@ body {
     background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent);
     transform: rotateX(80deg) scale(2);
     transform-origin: bottom center;
-    box-shadow: inset 0px 50vh 40vmin 40vmin #000;
+    box-shadow: inset 0px 50vh 40vmin 40vmin black;
     animation: rad 2s linear infinite;
 }
 @keyframes rad {
@@ -165,32 +165,24 @@ body {
     border-style: double; */
     transform: translate(30%, 45%);
     transform-origin: top;
-    background-color: black;
+    background-color:black;
     overflow: scroll;
 }
 ::-webkit-scrollbar {
     display: none;
 }
+
+#exchange .main-content {
+    width: 50vw;
+    transform: translate(50%, 45%);
+    box-shadow: 0px 0px 30px 30px black;
+}
+
 .exchange-main {
     position: relative;
     margin: 1%;
     border:#FF0000;
     /* border-style: double; */
-}
-
-.post h1 {
-    margin: 10px;
-}
-
-.post a {
-    text-decoration: none;
-    color: red;
-    transition: 0.5s;
-    font-family: 'retro_gaming';
-}
-
-.post h1:hover {
-    animation: blink-animation .6s steps(2, start) infinite;
 }
 
 .post {
@@ -201,17 +193,31 @@ body {
     width: auto;
     border-bottom: solid maroon;
     border-top: solid maroon;
-
+    transition: 0.5s;
 }
 
+.post h1 {
+    margin: 10px;
+    width: 50%;
+}
+
+.post a:link, a:visited {
+    text-decoration: none;
+    color: red;
+    font-family: 'retro_gaming';
+}
+
+.post h1:hover {
+    animation: blink-animation .6s steps(2, start) infinite;
+}
 
 .post img {
     position: absolute;
-    border: red;
-    border-style: double;
+    /* border: red;
+    border-style: double; */
     left: 60%;
-    max-width:38%;
-    max-height:90%;
+    /* width: 30%; */
+    max-height:85%;
     margin: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -232,17 +238,17 @@ body {
 .info ul {
     padding-left: 0;
     margin: 10px;
-    list-style: circle;
 }
 .info ul li{
     display: inline-block;
-    /* width: 100%;
-    height: 100%; */
     color: white;
+    list-style-type: disc;
+
 }
 
 .info a {
     font-size: 12px;
+    transition: color 0.5s;
 }
 
 .info a:hover {
@@ -254,5 +260,6 @@ body {
     padding: 10px;
     font-family: 'ds_bios';
     font-size: 17px;
+    width: 50%;
 }
 
