@@ -210,6 +210,8 @@ body {
 .segment h1 {
     margin: 10px;
     width: 50%;
+    color: red;
+
 }
 
 .segment a:link, a:visited {
