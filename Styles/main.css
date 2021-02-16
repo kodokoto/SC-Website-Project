@@ -5,6 +5,27 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'virtual_logoregular';
+    src: url('./fonts/virtual_logo-webfont.woff2') format('woff2'),
+         url('./fonts/virtual_logo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ds_bios';
+    src: url('./fonts/nintendo-ds-bios-webfont.woff2') format('woff2'),
+         url('./fonts/nintendo-ds-bios-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'retro_gaming';
+    src: url('./fonts/retro_gaming-webfont.woff2') format('woff2'),
+         url('./fonts/retro_gaming-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     position: static;
     top: 0;
@@ -157,6 +178,7 @@ body {
     position: relative;
     margin: 1%;
     color: red;
+    font-family: retro_gaming;
 }
 .player {
     position: relative;
@@ -171,4 +193,5 @@ body {
 .credits {
     position: relative;
     color: red;
+    font-family: ds_bios;
 }
