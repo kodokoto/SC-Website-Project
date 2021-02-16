@@ -1,5 +1,5 @@
 <!doctype HTML>
-<html lang="en">
+<html lang="en-UK">
 
   <!-- head -->
 
@@ -13,15 +13,22 @@
 
   <!-- Body Begins -->
 
-  <body>
-    <!-- Header -->
-    <header>
-      <img src="./styles/images/logo.png" class="logo" alt="logo">
+  <body> 
+    <!-- Responsiveness -->
+    <div class="row">
+    
+      <!-- Header -->
+    <header class="col-12">
+      <img src="./styles/images/logo.png" alt="logo"> <!-- 100% Width -->
     </header>
+    </div>
+
+   
+    <div class="row">
 
     <!-- Navigation Bar -->
-    <navbar>
-      <img src="./styles/images/menu.png" class="navigation-image" alt="logo">
+    <navbar class="col-3"> <!-- 25%% Width -->
+      <img src="./styles/images/menu.png" class="col-12" alt="logo">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="news.html">News</a></li>
@@ -35,8 +42,8 @@
     </navbar>
 
     <!-- The Grid (content)-->
-    <main>
-      <section>
+    <main class="col-9"> <!-- 75% Width -->
+      <section class="col-12"> <!-- 100% Width -->
         <!-- Contains each item for sale -->
         <article>
           <figure class="item1">
@@ -60,10 +67,13 @@
         </article>
       </section>
     </main>
+  </div>
 
+  <div class="row">
     <!-- Footer -->
-    <footer>
+    <footer class="col-12"> <!-- 100% Width -->
     </footer>
+  </div>
 
     <!-- Body Ends -->
   </body>

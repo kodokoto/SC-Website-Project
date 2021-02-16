@@ -198,31 +198,6 @@ body {
   align-content: stretch;
 
 }
-
-.gallery {
-
-}
-
-.gallery__img {
-}
-
-.gallery__item--1 {
-  grid-column: 1;
-
-}
-
-.gallery__item--2 {}
-
-.gallery__item--3 {}
-
-.gallery__item--4 {}
-
-.gallery__item--5 {}
-
-.gallery__item--6 {
-  grid-column: auto;
-}
-
 /* old main */
 
 /**

@@ -1,24 +1,12 @@
+/* Default Formating */
 * {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-  display         : flex;
-  justify-content: center;
-}
+  box-sizing: border-box;
+  }
 
-/* Style the Body */
-body {
-  flex-direction  : column;
-  margin          : 0;
-  overflow        : hidden;
-  perspective     : 1000px;
-  transform-style : preserve-3d;
-  width: 100vmin;
-  height: 100vmin;
-}
-
-/* Header formating */
+/* Header Formating */
+  /* Header Default Formating */
 header {
+  height: 50vmin;
   background-image : linear-gradient(
                        0deg,
                        transparent 69%,
@@ -39,129 +27,61 @@ header {
                        transparent 82%,
                        transparent
                      );
-  box-shadow       : inset 0px -50vh 40vmin 40vmin #000;
   background-size  : 50px 50px;
+  box-shadow       : inset 0px -50vh 40vmin 40vmin #000;
   animation        : rad 2s reverse linear infinite;
   transform        : rotateX(-80deg) scale(2);
   transform-origin : top center;
 }
-
+  /* Header Image (VB Logo) Formating */
 header img{
-  height: 3
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  width: 50vmin;
-  height: auto;
-
+  top: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Style the top navigation bar */
+/* Navbar Formating */
+  /* Navbar Base Formating */
 navbar {
+  top: 50%;
+  display          : block;
+  position         : fixed;
   transform        : translate(0, -50%) rotateY(40deg);
   transform-origin : left center;
+  
 }
-
-/* Style the top navigation bar */
-navbar img {
-  top              : 50%;
-  left             : 3vw;
-  width            : 275px;
-  transform        : translate(0, -50%) rotateY(40deg);
-  transform-origin : left center;
+  /* Navbar Background Formating */
+navbar img{
+  margin: 0;
+  max-height: fit-content;
 }
-
-navbar ul{
-}
-
+  /* Navbar List Formating */
 navbar li{
+  position: relative;
   margin          : 10px 0;
   list-style-type : none;
 }
-
-/* this adds blink animation and finger at hover */
-
-navbar li:hover {
+/* Navbar Hover Fomating */
+navbar li:hover{
   list-style-image    : url('./images/indicator.png');
   list-style-position : inside;
   animation           : blink-animation .6s steps(2, start) infinite;
   /* margin-left: 15px; */
 }
-
-/* Style the navigation bar links */
-navbar a {
+    /* Navbar Link Formating */
+navbar ul{
+  padding-left : 15px;
+}
+  /* Navbar Text Formating */
+navbar a{
   color           : #FF0000;
   text-decoration : none;
   font-family     : 'arcadeclassicregular',
                     '';
   font-size       : 35px;
 }
-
-/* Change color on hover */
-
-navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Main column */
-main {
-  background-color: white;
-  padding: 20px;
-}
-
-/* Footer */
-footer {
-  position: sticky;
-  background-image : linear-gradient(
-                       0deg,
-                       transparent 69%,
-                       #FF0000 74%,
-                       #FF0000 75%,
-                       #FF0000 76%,
-                       #FF0000 77%,
-                       transparent 82%,
-                       transparent
-                     ),
-                     linear-gradient(
-                       90deg,
-                       transparent 69%,
-                       #FF0000 74%,
-                       #FF0000 75%,
-                       #FF0000 76%,
-                       #FF0000 77%,
-                       transparent 82%,
-                       transparent
-                     );
-  background-size  : 50px 50px;
-  box-shadow       : inset 0px 50vh 40vmin 40vmin #000;
-  animation        : rad 2s linear infinite;
-  transform        : rotateX(80deg) scale(2);
-  transform-origin : bottom center;
-  bottom: 0;
-}
-
-
-@@font-face {
-  font-family : 'arcadeclassicregular';
-  font-style  : normal;
-  font-weight : normal;
-  src         : url('./fonts/arcadeclassic-webfont.woff2') format('woff2'),
-                url('./fonts/arcadeclassic-webfont.woff') format('woff');
-}
-
-@media
-  only screen
-  and (max-height : 700px) {
-  .navigation-box {
-    transform : translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
-  }
-
-  .navigation-image {
-    transform : translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
-  }
-}
-
+  /* Navbar Blinking Icon */
 @keyframes blink-animation {
   0% {
     opacity : 1;
@@ -177,5 +97,110 @@ footer {
 
   100% {
     opacity : 0;
+  }
+}
+
+/* Body Formating */
+  /* Body Default Formating */
+body {
+  position        : static;
+  margin          : auto;
+  overflow        : hidden;
+  background      : #000;
+  perspective     : 1000px;
+  transform-style : preserve-3d;
+}
+/* Main Section Formating */
+main {
+  width: 75%;
+  float: left;
+}
+
+/* Footer Formating */
+/* (Mirror of Header without Logo) */
+  /* Footer Defaults */
+footer {
+  width: 100%;
+}
+
+/* Repsonsiveness */
+  /* Row Formating */
+    /* Should Clear Formating After Each Instance of "Row" in HTML */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  /* Base Grid */
+[class*="col-"] {
+  width: 100%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+   /* For small Screens: */
+@media only screen and (min-width: 600px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+  /* For SD Res */
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+  /* For HD Res: */
+@media only screen and (min-width: 992px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+  /* For High Res: */
+@media only screen and (min-width: 1200px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+@keyframes rad {
+  100% {
+    background-position : 0px 50px;
   }
 }
