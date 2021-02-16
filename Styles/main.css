@@ -153,3 +153,9 @@ body {
     background-color: black;
     overflow: scroll;
 }
+.player {
+    position: relative;
+}
+.credits {
+    position: relative;
+}
