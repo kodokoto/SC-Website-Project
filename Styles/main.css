@@ -178,20 +178,27 @@ body {
     position: relative;
     margin: 1%;
     color: red;
-    font-family: retro_gaming;
+    font-family: 'retro_gaming';
+    width: 100%;
+
 }
 .player {
     position: relative;
-    display:inline-block
+    display: inline-block;
+    height: 50%;
+    width: 20%;
 }
 .player-img {
     position: relative;
+    /* height: 50%;
+    width: 25%; */
 }
 .player-info {
     position: relative;
+    font-size: 20px;
 }
 .credits {
     position: relative;
     color: red;
-    font-family: ds_bios;
+    font-family: 'ds_bios';
 }
