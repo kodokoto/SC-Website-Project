@@ -240,7 +240,8 @@ body {
     display: inline-block;
     color: white;
     list-style-type: disc;
-
+    margin-right: 10px;
+    white-space:pre;
 }
 
 
