@@ -211,7 +211,8 @@ body {
     margin: 10px;
     width: 50%;
     color: red;
-
+    display: inherit;
+   
 }
 
 .segment a:link, a:visited {
