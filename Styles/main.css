@@ -182,6 +182,12 @@ body {
     border:#FF0000;
 }
 
+.resources-main {
+    position: relative;
+    margin: 1%;
+    border:#FF0000;
+}
+
 .segment {
     position: relative;
     margin: 1%;
