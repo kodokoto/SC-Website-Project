@@ -5,6 +5,20 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'ds_bios';
+    src: url('./fonts/nintendo-ds-bios-webfont.woff2') format('woff2'),
+         url('./fonts/nintendo-ds-bios-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'retro_gaming';
+    src: url('./fonts/retro_gaming-webfont.woff2') format('woff2'),
+         url('./fonts/retro_gaming-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     position: static;
     top: 0;
@@ -100,6 +114,9 @@ body {
         opacity: 0;
     }
 }
+
+/* using from opacity:0; to opacity:1; creates a really weird bug */
+
 @keyframes help-animation {
     0% {
         opacity: 1;
@@ -147,7 +164,7 @@ body {
     left: 0;
     margin: auto;
     background-size: 50px 50px;
-    background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent);
+    background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, transparent 82%), linear-gradient(90deg, transparent 69%, #FF0000 74%, transparent 82%);
     transform: rotateX(-80deg) scale(2);
     transform-origin: top center;
     box-shadow: inset 0px -50vh 40vmin 40vmin #000;
@@ -161,7 +178,7 @@ body {
     left: 0;
     margin: auto;
     background-size: 50px 50px;
-    background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent);
+    background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, transparent 82%), linear-gradient(90deg, transparent 69%, #FF0000 74%, transparent 82%);
     transform: rotateX(80deg) scale(2);
     transform-origin: bottom center;
     box-shadow: inset 0px 50vh 40vmin 40vmin #000;
@@ -202,6 +219,9 @@ body {
     background-color: black;
     /* overflow: scroll; */
     /* overflow must be removed for history page */
+}
+::-webkit-scrollbar {
+    display: none;
 }
 
 /* timeline */
@@ -262,44 +282,61 @@ body {
     width: auto;
     background: black;
     padding: 20px;
+    display: none;
     visibility: hidden;
     border: red;
     border-style: solid;
     border-radius: 4px;
     opacity: 0;
-    transition: 0.5s;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: 2%;
+    overflow: hidden;
 
+}
+.event h1 {
+    font-family: 'retro_gaming';
+    color: red;
 }
 .event p {
     overflow-wrap: break-word;
     word-wrap: break-word;
+    font-family: 'ds_bios';
+    font-size: 17px;
 }
 
 .event-tag {
     position: relative;
-    font-family: 'arcadeclassicregular';
+    font-family: 'retro_gaming';
     font-size: 20;
     color: #FF0000;
     top: 30px;
-    transform: translateX(-10px);
+    transform: translateX(-15px);
     text-align: center;
 }
 
 ul li:hover .event {
-    visibility: visible;
-    opacity: 1;
+    display: block;
+    animation: fadein 0.5s linear forwards;
+}
 
+@keyframes fadein {
+    from {
+        visibility: inherit;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .help-sign {
     position: relative;
-    font-family: 'arcadeclassicregular';
-    font-size: 4vw;
+    font-family: 'retro_gaming';
+    font-size: 2vw;
     color: #FF0000;
     animation: help-animation 1s steps(2, start) infinite;
     transform: translateY(-15%);
@@ -310,17 +347,15 @@ ul li:hover .event {
 
 .line {
     position: absolute;
-    width: 3px;
-    height: 5vh;
+    width: 5px;
+    height: 6vh;
     background: #FF0000;
-    transform: translate(8px, -5vh);
+    transform: translate(7px, -5vh);
     visibility: 0;
     opacity: 0;
-    transition: 0.5s;
 }
 
 ul li:hover .line {
-    visibility: visible;
-    opacity: 1;
+    animation: fadein 0.5s linear forwards;
 }
 
