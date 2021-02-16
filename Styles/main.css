@@ -1,211 +1,242 @@
 @font-face {
-  font-family : 'arcadeclassicregular';
-  font-style  : normal;
-  font-weight : normal;
-  src         : url('./fonts/arcadeclassic-webfont.woff2') format('woff2'),
-                url('./fonts/arcadeclassic-webfont.woff') format('woff');
+  font-family: 'arcadeclassicregular';
+  src: url('./fonts/arcadeclassic-webfont.woff2') format('woff2'),
+       url('./fonts/arcadeclassic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ds_bios';
+  src: url('./fonts/nintendo-ds-bios-webfont.woff2') format('woff2'),
+       url('./fonts/nintendo-ds-bios-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'retro_gaming';
+  src: url('./fonts/retro_gaming-webfont.woff2') format('woff2'),
+       url('./fonts/retro_gaming-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  position        : static;
-  margin          : auto;
-  overflow        : hidden;
-  background      : #000;
-  perspective     : 1000px;
-  transform-style : preserve-3d;
-}
+  position: static;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: #000;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  overflow: hidden;
 
+}
 .logo {
-  z-index      : 1;
-  display      : block;
-  width        : 20vw;
-  margin-top   : 50%;
-  margin-right : auto;
-  margin-left  : auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50;
+  width: 20vw;
+  z-index: 1;
 }
 
 /* menu navbar */
 
 /* background image of the menu */
-
 .navigation-image {
-  display          : block;
-  position         : fixed;
-  top              : 50%;
-  left             : 3vw;
-  width            : 275px;
-  transform        : translate(0, -50%) rotateY(40deg);
-  transform-origin : left center;
+  position: fixed;
+  display: block;
+  transform-origin: left center;
+  width: 275px;
+  top: 50%;
+  left: 3vw; 
+  transform: translate(0, -50%) rotateY(40deg);
 }
-
 /* menu list */
-
 .navigation-box {
-  display          : block;
-  position         : fixed;
-  top              : 50%;
-  left             : 3vw;
-  width            : 250px;
-  padding-bottom   : 25px;
-  padding-left     : 15px;
-  transform        : translate(0, -50%) rotateY(40deg);
-  transform-origin : left center;
+  position: fixed;
+  display: block;
+  width: 250px;
+  top: 50%;
+  left: 3vw;
+  transform: translate(0, -50%) rotateY(40deg);
+  padding-left: 15px; 
+  padding-bottom: 25px;
+  transform-origin: left center;
 }
-
 .navigation-box ul {
-  padding-left : 15px;
+  padding-left: 15px;
 }
-
 .navigation-box li {
-  margin          : 10px 0;
-  list-style-type : none;
+  margin: 10px 0;
+  list-style-type: none;
 }
-
 /* this adds blink animation and finger at hover */
-
 .navigation-box li:hover {
-  list-style-image    : url('./images/indicator.png');
-  list-style-position : inside;
-  animation           : blink-animation .6s steps(2, start) infinite;
+  list-style-image: url('./images/indicator.png');
+  list-style-position: inside;
   /* margin-left: 15px; */
+  animation: blink-animation .6s steps(2, start) infinite;
 }
-
 .navigation-box a {
-  color           : #FF0000;
-  text-decoration : none;
-  font-family     : 'arcadeclassicregular',
-                    '';
-  font-size       : 35px;
+  font-family: 'arcadeclassicregular';
+  font-size: 35;
+  color: #FF0000;
+  text-decoration: none;
 }
 
 @keyframes blink-animation {
   0% {
-    opacity : 1;
+      opacity: 1;
   }
-
+  
   49% {
-    opacity : 1;
+      opacity: 1;
   }
-
+  
   50% {
-    opacity : 0;
+      opacity: 0;
   }
 
   100% {
-    opacity : 0;
+      opacity: 0;
   }
 }
-
 /* grid animation */
 
 .top {
-  position         : absolute;
-  top              : 0;
-  right            : 0;
-  bottom           : 0;
-  left             : 0;
-  margin           : auto;
-  background-image : linear-gradient(
-                       0deg,
-                       transparent 69%,
-                       #FF0000 74%,
-                       #FF0000 75%,
-                       #FF0000 76%,
-                       #FF0000 77%,
-                       transparent 82%,
-                       transparent
-                     ),
-                     linear-gradient(
-                       90deg,
-                       transparent 69%,
-                       #FF0000 74%,
-                       #FF0000 75%,
-                       #FF0000 76%,
-                       #FF0000 77%,
-                       transparent 82%,
-                       transparent
-                     );
-  background-size  : 50px 50px;
-  box-shadow       : inset 0px -50vh 40vmin 40vmin #000;
-  animation        : rad 2s reverse linear infinite;
-  transform        : rotateX(-80deg) scale(2);
-  transform-origin : top center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-size: 50px 50px;
+  background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent);
+  transform: rotateX(-80deg) scale(2);
+  transform-origin: top center;
+  box-shadow: inset 0px -50vh 40vmin 40vmin #000;
+  animation: rad 2s reverse linear infinite;
+}
+.bottom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-size: 50px 50px;
+  background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent);
+  transform: rotateX(80deg) scale(2);
+  transform-origin: bottom center;
+  box-shadow: inset 0px 50vh 40vmin 40vmin #000;
+  animation: rad 2s linear infinite;
+}
+@keyframes rad {
+  100% {
+      background-position: 0px 50px;
+ }
 }
 
-.bottom {
-  position         : absolute;
-  top              : 0;
-  right            : 0;
-  bottom           : 0;
-  left             : 0;
-  margin           : auto;
-  background-image : linear-gradient(
-                       0deg,
-                       transparent 69%,
-                       #FF0000 74%,
-                       #FF0000 75%,
-                       #FF0000 76%,
-                       #FF0000 77%,
-                       transparent 82%,
-                       transparent
-                     ),
-                     linear-gradient(
-                       90deg,
-                       transparent 69%,
-                       #FF0000 74%,
-                       #FF0000 75%,
-                       #FF0000 76%,
-                       #FF0000 77%,
-                       transparent 82%,
-                       transparent
-                     );
-  background-size  : 50px 50px;
-  box-shadow       : inset 0px 50vh 40vmin 40vmin #000;
-  animation        : rad 2s linear infinite;
-  transform        : rotateX(80deg) scale(2);
-  transform-origin : bottom center;
+/* media queries */
+
+@media only screen and (max-height: 700px) {
+  .navigation-box {
+  transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+ 
+  }
+  .navigation-image {
+  transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+  }
 }
+
+.main-content {
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 70vw;
+  height: 60vh;
+  transform: translate(30%, 45%);
+  transform-origin: top;
+  background-color: black;
+  overflow: scroll;
+  box-shadow: 15px 5px 25px 15px black;    
+}
+
+/* remove scrollbar */
+.main-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* chets stuff */
+
+.shop-main {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows:  50% 50%;
+  column-gap: 3%;
+  row-gap: 3%;
+}
+
+.item {
+  position: relative;
+  /* width: 30%; */
+  /* min-height: 50px; */
+  /* background: green; */
+  border: red;
+  border-style: double;
+  overflow: hidden;
+  padding: 3%;
+}
+
+.item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80%;
+
+}
+
+.item a {
+
+}
+
+/* nicks stuff */
+
+#gallery .main-content {
+  width: 70%;
+  height: 60%;
+  border-radius: 10%;
+}
+
+
+/*images editing*/
+.images img {
+  position: relative;
+  flex-shrink: inherit;
+  border-radius: 23%;
+  width: 49%;
+  height: 94%; 
+  
+   
+}
+.images div {
+  margin-top: 3%;
+  margin-left: 3%;
+  margin-bottom: 3%;
+  margin-right: 3%;
+}
+
 
 @keyframes rad {
   100% {
     background-position : 0px 50px;
   }
 }
-
-/* media queries */
-
-@media
-  only screen
-  and (max-height : 700px) {
-  .navigation-box {
-    transform : translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
-  }
-
-  .navigation-image {
-    transform : translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
-  }
-}
-
-.container {
-  position: sticky; top: 250px;
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
-  grid-gap: 15px;
-  justify-items: stretch;
-  align-items: stretch;
-  justify-content: space-evenly;
-  align-content: stretch;
-
-}
-/* old main */
-
-/**
- * .main { width: 50vw; height: 50vh; position: relative; display: block;
- * background-color: black; border: #FF0000; border-style: double; border-width:
- * 6; overflow: auto; margin-left: 30vw; margin-right: auto; top: 60%;
- * transform: translateY(-50%); bottom: 0; left: 0; right: 0; color: ivory;
- * padding: 3vw; font-family: 'arcadeclassicregular'; } .main-content {
- * position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
- * font-size: large; color: azure; }
- */
