@@ -156,6 +156,12 @@ body {
 .player {
     position: relative;
 }
+.player-img {
+    position: relative;
+}
+.player-info {
+    position: relative;
+}
 .credits {
     position: relative;
 }
