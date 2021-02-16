@@ -161,8 +161,6 @@ body {
     left: 0;
     width: 70vw;
     height: 60vh;
-    /* border: red;
-    border-style: double; */
     transform: translate(30%, 45%);
     transform-origin: top;
     background-color:black;
@@ -182,7 +180,6 @@ body {
     position: relative;
     margin: 1%;
     border:#FF0000;
-    /* border-style: double; */
 }
 
 .post {
@@ -194,6 +191,14 @@ body {
     border-bottom: solid maroon;
     border-top: solid maroon;
     transition: 0.5s;
+}
+
+/* forced to use transition because keyframes cant have reverse animation on mouse out, and it looks janky */
+/* refresh bug is still there, but it doesnt look too bad */
+
+.post:hover{
+    transform: scale(1.02);
+    border-color: red;
 }
 
 .post h1 {
@@ -213,21 +218,13 @@ body {
 
 .post img {
     position: absolute;
-    /* border: red;
-    border-style: double; */
     left: 60%;
-    /* width: 30%; */
     max-height:85%;
     margin: 0;
     top: 50%;
     transform: translateY(-50%);
     margin-left: auto;
     margin-right: auto;
-}
-.post:hover{
-    transform: scale(1.02);
-    border-color: red;
-    animation: border-blink .6s steps(2, start) infinite;
 }
 
 .info {
@@ -246,13 +243,23 @@ body {
 
 }
 
+
 .info a {
     font-size: 12px;
-    transition: color 0.5s;
 }
 
 .info a:hover {
-    color: white;
+    animation: white-fade 0.5s linear forwards;
+}
+
+/* have to use keyframes ove transition because transiotion hasa reload bug that cant be fixed without using js */
+@keyframes white-fade {
+    from {
+        color: red;
+    }
+    to {
+        color: white;
+    }
 }
 
 .text {
