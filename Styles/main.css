@@ -79,10 +79,12 @@ body {
     animation: blink-animation .6s steps(2, start) infinite;
 }
 .navigation-box a {
-    font-family: 'arcadeclassicregular';
-    font-size: 35;
+    font-family: 'retro_gaming';
+    font-size: 25;
     color: #FF0000;
     text-decoration: none;
+    top:-5px; 
+    position:relative;;
 }
 
 @keyframes blink-animation {
@@ -178,16 +180,16 @@ body {
 
 .post h1 {
     margin: 10px;
-    font-family: 'retro_gaming';
 }
 
 .post a {
     text-decoration: none;
     color: red;
     transition: 0.5s;
+    font-family: 'retro_gaming';
 }
 
-.post a:hover {
+.post h1:hover {
     animation: blink-animation .6s steps(2, start) infinite;
 }
 
@@ -201,12 +203,7 @@ body {
     border-top: solid maroon;
 
 }
-.post-main {
-    /* border: red; */
-    /* border-style: dotted; */
-    width: 60%;
 
-}
 
 .post img {
     position: absolute;
@@ -230,6 +227,7 @@ body {
 .info {
     padding: 0;
     height: 10px;
+    font-family: "ds_bios";
 }
 .info ul {
     padding-left: 0;
@@ -243,9 +241,18 @@ body {
     color: white;
 }
 
+.info a {
+    font-size: 12px;
+}
+
+.info a:hover {
+    color: white;
+}
+
 .text {
     color: white;
     padding: 10px;
     font-family: 'ds_bios';
+    font-size: 17px;
 }
 
