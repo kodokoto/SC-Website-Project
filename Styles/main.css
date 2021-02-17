@@ -208,6 +208,7 @@ body {
 }
 
 .segment h1 {
+    font-family:'retro_gaming';
     margin: 10px;
     width: 50%;
     color: red;
@@ -215,7 +216,7 @@ body {
     text-align: center;
 }
 .segment h2{
-    
+    font-family:'retro_gaming';
     margin: 10px;
     width: 50%;
     color: red;
@@ -255,7 +256,7 @@ body {
     }
 }
 
-#resources.text {
+.resources-text {
     color: white;
     padding: 10px;
     font-family: 'ds_bios';
