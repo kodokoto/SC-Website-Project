@@ -180,6 +180,9 @@ body {
     color: red;
     font-family: 'retro_gaming';
     width: 100%;
+    height: auto;
+    align-content: center;
+    left: 7%;
 
 }
 .player {
@@ -196,6 +199,7 @@ body {
 .player-info {
     position: relative;
     font-size: 20px;
+    text-align: center;
 }
 .credits {
     position: relative;
