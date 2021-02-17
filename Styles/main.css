@@ -166,8 +166,8 @@ body {
     left: 0;
     width: 70%;
     height: 60%;
-    border: red;
-    border-style: double;
+    /* border: red;
+    border-style: double; */
     /* border-width: 10px; */
     transform: translate(30%, 45%);
     transform-origin: top;
