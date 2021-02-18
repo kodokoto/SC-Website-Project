@@ -228,14 +228,15 @@ body {
 }
 .player-img {
     position: relative;
+    height: 100%;
 }
 .player-info {
     position: relative;
     font-size: 40px;
 }
-.credits h1{
+/* .credits h1{
     font-size: 30px;
-}
+} */
 .credits {
     position: relative;
     color: red;
@@ -243,4 +244,5 @@ body {
     font-family: 'ds_bios';
     text-align: center;
     height: 50%;
+    font-size: 30px;
 }
