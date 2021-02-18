@@ -178,7 +178,7 @@ body {
     display: none;
 }
 .player:hover{
-    transform: scale(1.02);
+    /* transform: scale(1.02); */
     border-color: red;
     border-style: dotted;
     border-width: 5px;
@@ -245,4 +245,18 @@ body {
     text-align: center;
     height: 50%;
     font-size: 30px;
+}
+
+.player-info ul {
+    padding-left: 15px;
+}
+.player-info li {
+    margin: 10px 0;
+    list-style-type: none;
+}
+
+.player-info li:hover {
+    list-style-image: url('./images/indicator.png');
+    list-style-position: outside;
+    animation: blink-animation .6s steps(2, start)infinite;
 }
