@@ -178,11 +178,13 @@ body {
     display: none;
 }
 .player:hover{
-    /* transform: scale(1.02); */
     border-color: red;
     border-style: dotted;
     border-width: 5px;
     animation: border-blink .6s steps(2, start) infinite;
+    list-style-image: url('./images/indicator.png');
+    list-style-position: inside;
+    /* animation: blink-animation .6s steps(2, start)infinite; */
 }
 @keyframes border-blink {
     0% {
@@ -219,16 +221,18 @@ body {
 .player {
     position: relative;
     /* float: left; */
-    height: 50%;
+    height: auto;
     width: 20%;
     margin: 1%;
     float: left;
     text-align: center;
     left: 5% ;
+    border: black;
+    border-style: dotted ;
 }
 .player-img {
     position: relative;
-    height: 100%;
+    height: 60%;
 }
 .player-info {
     position: relative;
@@ -252,11 +256,10 @@ body {
 }
 .player-info li {
     margin: 10px 0;
-    list-style-type: none;
+    list-style-type: initial;
+    list-style-position: inside;
+}
+.player-info li::marker{
+    color: black;
 }
 
-.player-info li:hover {
-    list-style-image: url('./images/indicator.png');
-    list-style-position: outside;
-    animation: blink-animation .6s steps(2, start)infinite;
-}
