@@ -5,6 +5,20 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'ds_bios';
+    src: url('./fonts/nintendo-ds-bios-webfont.woff2') format('woff2'),
+         url('./fonts/nintendo-ds-bios-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'retro_gaming';
+    src: url('./fonts/retro_gaming-webfont.woff2') format('woff2'),
+         url('./fonts/retro_gaming-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     position: static;
     top: 0;
@@ -12,7 +26,7 @@ body {
     bottom: 0;
     left: 0;
     margin: auto;
-    background: #000;
+    background: black;
     transform-style: preserve-3d;
     perspective: 1000px;
     overflow: hidden;
@@ -50,6 +64,7 @@ body {
     padding-left: 15px; 
     padding-bottom: 25px;
     transform-origin: left center;
+    color: red;
 }
 .navigation-box ul {
     padding-left: 15px;
@@ -66,10 +81,12 @@ body {
     animation: blink-animation .6s steps(2, start) infinite;
 }
 .navigation-box a {
-    font-family: 'arcadeclassicregular';
-    font-size: 35;
+    font-family: 'retro_gaming';
+    font-size: 25;
     color: #FF0000;
     text-decoration: none;
+    position: relative;
+    top: -1px; /* this centers the text with the indicator vertically */
 }
 
 @keyframes blink-animation {
@@ -102,7 +119,7 @@ body {
     background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent);
     transform: rotateX(-80deg) scale(2);
     transform-origin: top center;
-    box-shadow: inset 0px -50vh 40vmin 40vmin #000;
+    box-shadow: inset 0px -50vh 40vmin 40vmin black;
     animation: rad 2s reverse linear infinite;
 }
 .bottom {
@@ -116,7 +133,7 @@ body {
     background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent);
     transform: rotateX(80deg) scale(2);
     transform-origin: bottom center;
-    box-shadow: inset 0px 50vh 40vmin 40vmin #000;
+    box-shadow: inset 0px 50vh 40vmin 40vmin black;
     animation: rad 2s linear infinite;
 }
 @keyframes rad {
@@ -148,7 +165,7 @@ body {
     height: 60vh;
     transform: translate(30%, 45%);
     transform-origin: top;
-    background-color: black;
+    background-color:black;
     overflow: scroll;
     box-shadow: 15px 5px 25px 15px black;    
 }
@@ -181,4 +198,117 @@ body {
     margin-bottom: 3%;
     margin-right: 3%;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#resources .main-content {
+    width: 50vw;
+    transform: translate(50%, 45%);
+    box-shadow: 0px 0px 30px 30px black;
+}
+
+.exchange-main {
+    position: relative;
+    margin: 1%;
+    border:#FF0000;
+}
+
+.resources-main {
+    position: relative;
+    margin: 1%;
+    
+}
+
+.segment {
+    position: relative;
+    margin: 1%;
+    padding: 1%;
+    height: fit-content;
+    width: auto;
+    border-bottom: dotted maroon;
+    border-top: dotted maroon;
+    transition: 0.5s;
+}
+
+/* forced to use transition because keyframes cant have reverse animation on mouse out, and it looks janky */
+/* refresh bug is still there, but it doesnt look too bad */
+
+.segment h1 {
+    font-family:'retro_gaming';
+    margin: 10px;
+    width: 100%;
+    color:red;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.segment h1:hover{
+    transform: scale(1.55);
+    border-color: red;
+}
+
+
+.segment h2{
+    font-family:'retro_gaming';
+    font-size: 20px;
+    margin: 10px;
+    width: 50%;
+    color: #EF0107;
+    display: inherit;   
+}
+
+
+.segment li  a {
+    text-decoration: none;
+    font-family: 'ds_bios';
+    font-size: 17px;
+    color: white;
+}
+
+.segment li a:hover {
+    animation: red-fade 0.5s linear forwards;
+}
+
+/* ul li a:hover {
+    animation: blink-animation .6s steps(2, start) infinite;
+} */
+
+
+
+/* have to use keyframes ove transition because transiotion hasa reload bug that cant be fixed without using js */
+@keyframes white-fade {
+    from {
+        color: red;
+    }
+    to {
+        color: white;
+    }
+}
+
+@keyframes red-fade {
+    from {
+        color: white;
+    }
+    to {
+        color: red;
+    }
+}
+
+/* .resources-link a:link, a:visited, a:active {
+    padding: 50px;
+    font-family: 'ds_bios';
+    font-size: 40px;
+    width: 80%;
+    
+} */
+
+.resources-link ul {
+    list-style-type: square;
+    color:maroon;
+    
+}
+
+
 
