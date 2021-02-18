@@ -181,4 +181,10 @@ body {
     margin-bottom: 3%;
     margin-right: 3%;
 }
+.error {
+    position: relative ;
+    animation: blink-animation .6s steps(2, start) infinite;
+    color: red;
+    text-align: center;
 
+}
