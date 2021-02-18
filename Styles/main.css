@@ -63,6 +63,7 @@ body {
     padding-left: 15px; 
     padding-bottom: 25px;
     transform-origin: left center;
+    color: red;
 }
 .navigation-box ul {
     padding-left: 15px;
@@ -202,50 +203,46 @@ body {
 /* forced to use transition because keyframes cant have reverse animation on mouse out, and it looks janky */
 /* refresh bug is still there, but it doesnt look too bad */
 
-.segment h1:hover{
-    transform: scale(1.55);
-    border-color: red;
-}
-
 .segment h1 {
     font-family:'retro_gaming';
     margin: 10px;
     width: 100%;
     color:red;
     text-align: center;
+    transition: 0.5s;
 }
+
+.segment h1:hover{
+    transform: scale(1.55);
+    border-color: red;
+}
+
+
 .segment h2{
     font-family:'retro_gaming';
     font-size: 20px;
     margin: 10px;
     width: 50%;
     color: #EF0107;
-    display: inherit;
-    
+    display: inherit;   
 }
 
-.segment a:link, a:visited {
+
+.segment li  a {
     text-decoration: none;
-    color: red;
     font-family: 'ds_bios';
     font-size: 17px;
-    
+    color: white;
 }
 
-ul li a:hover {
+.segment li a:hover {
+    animation: red-fade 0.5s linear forwards;
+}
+
+/* ul li a:hover {
     animation: blink-animation .6s steps(2, start) infinite;
-}
+} */
 
-.segment img {
-    position: absolute;
-    left: 60%;
-    max-height:85%;
-    margin: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: auto;
-    margin-right: auto;
-}
 
 
 /* have to use keyframes ove transition because transiotion hasa reload bug that cant be fixed without using js */
@@ -258,16 +255,24 @@ ul li a:hover {
     }
 }
 
-.resources-link a{
-    color: white;
+@keyframes red-fade {
+    from {
+        color: white;
+    }
+    to {
+        color: red;
+    }
+}
+
+/* .resources-link a:link, a:visited, a:active {
     padding: 50px;
     font-family: 'ds_bios';
     font-size: 40px;
     width: 80%;
     
-}
+} */
 
-ul {
+.resources-link ul {
     list-style-type: square;
     color:maroon;
     
