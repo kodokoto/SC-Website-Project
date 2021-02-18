@@ -202,8 +202,8 @@ body {
 /* forced to use transition because keyframes cant have reverse animation on mouse out, and it looks janky */
 /* refresh bug is still there, but it doesnt look too bad */
 
-.segment:hover{
-    transform: scale(1.02);
+.segment h1:hover{
+    transform: scale(1.55);
     border-color: red;
 }
 
@@ -216,6 +216,7 @@ body {
 }
 .segment h2{
     font-family:'retro_gaming';
+    font-size: 20px;
     margin: 10px;
     width: 50%;
     color: #EF0107;
@@ -226,11 +227,12 @@ body {
 .segment a:link, a:visited {
     text-decoration: none;
     color: red;
-    font-family: 'retro_gaming';
+    font-family: 'ds_bios';
+    font-size: 17px;
     
 }
 
-.segment h1:hover {
+ul li a:hover {
     animation: blink-animation .6s steps(2, start) infinite;
 }
 
@@ -260,7 +262,7 @@ body {
     color: white;
     padding: 50px;
     font-family: 'ds_bios';
-    font-size: 17px;
+    font-size: 40px;
     width: 80%;
     
 }
@@ -272,7 +274,4 @@ ul {
 }
 
 
-ul a:hover{
-    transform: scale(1.02);
-    border-color: red;
-}
+
