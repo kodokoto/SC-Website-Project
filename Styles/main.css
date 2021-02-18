@@ -271,12 +271,6 @@ body {
     animation: red-fade 0.5s linear forwards;
 }
 
-/* ul li a:hover {
-    animation: blink-animation .6s steps(2, start) infinite;
-} */
-
-
-
 /* have to use keyframes ove transition because transiotion hasa reload bug that cant be fixed without using js */
 @keyframes white-fade {
     from {
@@ -295,14 +289,6 @@ body {
         color: red;
     }
 }
-
-/* .resources-link a:link, a:visited, a:active {
-    padding: 50px;
-    font-family: 'ds_bios';
-    font-size: 40px;
-    width: 80%;
-    
-} */
 
 .resources-link ul {
     list-style-type: square;
