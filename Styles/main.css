@@ -1,3 +1,6 @@
+/* Head Formating */
+  /*  Font */
+    /* Arcade Classic Regular */
 @font-face {
   font-family: 'arcadeclassicregular';
   src: url('./fonts/arcadeclassic-webfont.woff2') format('woff2'),
@@ -5,7 +8,7 @@
   font-weight: normal;
   font-style: normal;
 }
-
+    /* DS Bios */
 @font-face {
   font-family: 'ds_bios';
   src: url('./fonts/nintendo-ds-bios-webfont.woff2') format('woff2'),
@@ -13,6 +16,7 @@
   font-weight: normal;
   font-style: normal;
 }
+  /* Retro Gaming */
 @font-face {
   font-family: 'retro_gaming';
   src: url('./fonts/retro_gaming-webfont.woff2') format('woff2'),
@@ -20,7 +24,18 @@
   font-weight: normal;
   font-style: normal;
 }
+@media only screen and (max-height: 700px) {
+  .navigation-box {
+  transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+ 
+  }
+  .navigation-image {
+  transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+  }
+}
+/* End of Head Formating */
 
+/* Body Formating */
 body {
   position: static;
   top: 0;
@@ -34,6 +49,22 @@ body {
   overflow: hidden;
 
 }
+  /* Top Formating */
+.top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-size: 50px 50px;
+  background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent);
+  transform: rotateX(-80deg) scale(2);
+  transform-origin: top center;
+  box-shadow: inset 0px -50vh 40vmin 40vmin #000;
+  animation: rad 2s reverse linear infinite;
+}
+  /* Logo Formating */
 .logo {
   display: block;
   margin-left: auto;
@@ -42,10 +73,40 @@ body {
   width: 20vw;
   z-index: 1;
 }
+  /* End of Top Formating */
 
-/* menu navbar */
+  /* Bottom Formating */
+.bottom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-size: 50px 50px;
+  background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent);
+  transform: rotateX(80deg) scale(2);
+  transform-origin: bottom center;
+  box-shadow: inset 0px 50vh 40vmin 40vmin #000;
+  animation: rad 2s linear infinite;
+}
+  /* End of Bottom Formating */
+  /* Grid Animation */
+@keyframes rad {
+  100% {
+      background-position: 0px 50px;
+ }
+}
+@keyframes rad {
+  100% {
+    background-position : 0px 50px;
+  }
+}
+  /* End of Grid Animation */
 
-/* background image of the menu */
+  /* Navbar Formating */
+
+    /* Navbar Background */
 .navigation-image {
   position: fixed;
   display: block;
@@ -55,11 +116,11 @@ body {
   left: 3vw; 
   transform: translate(0, -50%) rotateY(40deg);
 }
-/* menu list */
+    /* Navbar List Container */
 .navigation-box {
   position: fixed;
   display: block;
-  width: 250px;
+  width: 25vw;
   top: 50%;
   left: 3vw;
   transform: translate(0, -50%) rotateY(40deg);
@@ -67,27 +128,22 @@ body {
   padding-bottom: 25px;
   transform-origin: left center;
 }
+    /* Navbar List */
 .navigation-box ul {
   padding-left: 15px;
 }
+    /* Navbar List Items */
 .navigation-box li {
   margin: 10px 0;
   list-style-type: none;
 }
-/* this adds blink animation and finger at hover */
+    /* Navbar Hover */
 .navigation-box li:hover {
   list-style-image: url('./images/indicator.png');
   list-style-position: inside;
   /* margin-left: 15px; */
   animation: blink-animation .6s steps(2, start) infinite;
 }
-.navigation-box a {
-  font-family: 'arcadeclassicregular';
-  font-size: 35;
-  color: #FF0000;
-  text-decoration: none;
-}
-
 @keyframes blink-animation {
   0% {
       opacity: 1;
@@ -105,119 +161,96 @@ body {
       opacity: 0;
   }
 }
-/* grid animation */
-
-.top {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background-size: 50px 50px;
-  background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent);
-  transform: rotateX(-80deg) scale(2);
-  transform-origin: top center;
-  box-shadow: inset 0px -50vh 40vmin 40vmin #000;
-  animation: rad 2s reverse linear infinite;
+    /*Navbar Font Formating*/
+      /* Font: Arcade Classic Regular */
+.navigation-box a {
+  font-family: 'arcadeclassicregular';
+  font-size: 35;
+  color: #FF0000;
+  text-decoration: none;
 }
-.bottom {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background-size: 50px 50px;
-  background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent);
-  transform: rotateX(80deg) scale(2);
-  transform-origin: bottom center;
-  box-shadow: inset 0px 50vh 40vmin 40vmin #000;
-  animation: rad 2s linear infinite;
-}
-@keyframes rad {
-  100% {
-      background-position: 0px 50px;
- }
-}
+  /* End Navbar Formating */
 
-/* media queries */
-
-@media only screen and (max-height: 700px) {
-  .navigation-box {
-  transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
- 
-  }
-  .navigation-image {
-  transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
-  }
-}
-
+  /* Main Content Formating */
 .main-content {
   position: fixed;
   display: block;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 70vw;
-  height: 60vh;
-  transform: translate(30%, 45%);
-  transform-origin: top;
+  margin: 5px;
+  /* top: 0; */
+  /* right: 0; */
+  /* bottom: 0; */
+  /* left: 0; */
+  min-width: 25vw;
+  height: 50vh;
+  top: 25%;
+  left: 25%;
   background-color: black;
   overflow: scroll;
   box-shadow: 15px 5px 25px 15px black;    
 }
 
-/* remove scrollbar */
+  /* Scrollbar Formating */
 .main-content::-webkit-scrollbar {
   display: none;
 }
 
-/* chets stuff */
-
+    /* Exchange Formating */
+      /* Exchange Main */
 .shop-main {
   position: relative;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows:  50% 50%;
   column-gap: 3%;
   row-gap: 3%;
+  margin: 5px;
+  text-align: center;
+  justify-content: center;
 }
-
+      /* Exchange Items */
 .item {
   position: relative;
+  width: auto;
   /* width: 30%; */
   /* min-height: 50px; */
   /* background: green; */
   border: red;
   border-style: double;
-  overflow: hidden;
   padding: 3%;
 }
-
+      /* Exchange Images */
 .item img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   height: 80%;
+  width: max-content;
+  padding: 0;
 
 }
-
-.item a {
-
+      /* Exchange Text */
+.item li {
+  font-family: 'ds_bios';
+  color: #FF0000;
+  text-decoration: none;
+  list-style-type: none;
 }
+.item ul {
+  text-align: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+    /* End of Exchange Formating */
 
-/* nicks stuff */
-
+    /* Gallery Formating */
 #gallery .main-content {
   width: 70%;
   height: 60%;
   border-radius: 10%;
 }
-
-
-/*images editing*/
+    /* Gallery Images*/
 .images img {
   position: relative;
   flex-shrink: inherit;
@@ -227,16 +260,13 @@ body {
   
    
 }
+
 .images div {
   margin-top: 3%;
   margin-left: 3%;
   margin-bottom: 3%;
   margin-right: 3%;
 }
-
-
-@keyframes rad {
-  100% {
-    background-position : 0px 50px;
-  }
-}
+    /* End of Gallery Formating */
+  /* End of Main Content Formating */
+/* End of Body Formating */
