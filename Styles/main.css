@@ -194,8 +194,8 @@ body {
     padding: 1%;
     height: fit-content;
     width: auto;
-    border-bottom: solid maroon;
-    border-top: solid maroon;
+    border-bottom: dotted maroon;
+    border-top: dotted maroon;
     transition: 0.5s;
 }
 
@@ -210,16 +210,15 @@ body {
 .segment h1 {
     font-family:'retro_gaming';
     margin: 10px;
-    width: 50%;
-    color: red;
-    display: inherit;
+    width: 100%;
+    color:red;
     text-align: center;
 }
 .segment h2{
     font-family:'retro_gaming';
     margin: 10px;
     width: 50%;
-    color: red;
+    color: #EF0107;
     display: inherit;
     
 }
@@ -228,10 +227,15 @@ body {
     text-decoration: none;
     color: red;
     font-family: 'retro_gaming';
+    
 }
 
 .segment h1:hover {
     animation: blink-animation .6s steps(2, start) infinite;
+}
+
+.resources-link  a:hover {
+    animation: blink-animation .1s steps(2, start) infinite;
 }
 
 .segment img {
@@ -256,12 +260,16 @@ body {
     }
 }
 
-.resources-link {
+.resources-link a{
     color: white;
     padding: 50px;
     font-family: 'ds_bios';
     font-size: 17px;
     width: 80%;
-    list-style-type: square;
+    
 }
 
+ul {
+    list-style-type: square;
+    color:maroon;
+}
