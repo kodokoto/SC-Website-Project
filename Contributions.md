@@ -3,11 +3,7 @@
 
 
 # Introduction
-This document is to be completed by the entire group together. The document details the contribution of each team member to both a technical and design aspect of the project. 
-
-This document can be filled in and signed electronically. Please discuss this document as a group.
-
-One single document is to be handed in for each group. This should be submitted in the bundle that is submitted on learn.gold by 22/2/21 at 5pm, with the rest of the documents.
+This document is to be completed by the entire group together. The document details the contribution of each team member to both a technical and design aspect of the project. This document can be filled in and signed electronically. Please discuss this document as a group. One single document is to be handed in for each group. This should be submitted in the bundle that is submitted on learn.gold by 22/2/21 at 5pm, with the rest of the documents.
 
 # Contribution details
 Each team member should fill in one box, ensure that each team member's name is written in the box with their contributions. Contribution statements need only be a sentence or two long, or a few bullet points, but should make clear what the contribution was.
@@ -23,7 +19,6 @@ Each team member should fill in one box, ensure that each team member's name is 
 ||Shop Page|
 ||Exchange Page|
 
-
 ### Isham Bengo-Cank - ibeng001
 |Technical Contribution|Design Contribution|
 |--|--|
@@ -36,7 +31,6 @@ Each team member should fill in one box, ensure that each team member's name is 
 ||Credits page|
 ||Error page|
 ||Home page|
-
 
 ### Jorge Martin Albeniz - jmart023
 |Technical Contribution|Design Contribution|
@@ -53,7 +47,6 @@ Each team member should fill in one box, ensure that each team member's name is 
 ||Exchange page|
 ||News page|
 ||History page|
-
 
 ### Nicolas Cordischi - ncord001
 |Technical Contribution|Design Contribution|
@@ -79,9 +72,7 @@ Fill in each team member's name in a row in the table below and how much they ha
 # Confirmation
 Please type your name and an X next to the below statement to indicate that every team member has had a chance to discuss and contribute to this document. 
 
-
-## *We confirm that every team member has been consulted about this document:*
-
+### *We confirm that every team member has been consulted about this document:*
 |Name|Confirmation|
 |--|--|
 |Isham Bengo-Cank|X|
