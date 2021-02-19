@@ -1,9 +1,12 @@
+/* Head Formating */
+/*  Font */
+/* Arcade Classic Regular */
 @font-face {
-    font-family: 'arcadeclassicregular';
-    src: url('./fonts/arcadeclassic-webfont.woff2') format('woff2'),
-         url('./fonts/arcadeclassic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'arcadeclassicregular';
+  src: url('./fonts/arcadeclassic-webfont.woff2') format('woff2'),
+    url('./fonts/arcadeclassic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
     font-family: 'ds_bios';
@@ -32,6 +35,9 @@ body {
     overflow: hidden;
 
 }
+
+/* Logo Formating */
+/* Block */
 .logo {
     display: block;
     margin-left: auto;
@@ -46,9 +52,18 @@ body {
     -ms-user-select: none;
 }
 
-/* menu navbar */
+@keyframes rad {
+  100% {
+    background-position: 0px 50px;
+  }
+}
 
-/* background image of the menu */
+/* End of Grid Animation */
+
+/* Navbar Formating */
+
+/* Navbar Background */
+/* Block */
 .navigation-image {
     position: fixed;
     display: block;
@@ -76,20 +91,46 @@ body {
     transform-origin: left center;
     color: red;
 }
+
+/* Navbar List */
 .navigation-box ul {
-    padding-left: 15px;
+  padding-left: 15px;
 }
+
+/* Navbar List Items */
 .navigation-box li {
-    margin: 10px 0;
-    list-style-type: none;
+  margin: 10px 0;
+  list-style-type: none;
 }
-/* this adds blink animation and finger at hover */
+
+/* Navbar Hover */
 .navigation-box li:hover {
-    list-style-image: url('./images/indicator.png');
-    list-style-position: inside;
-    /* margin-left: 15px; */
-    animation: blink-animation .6s steps(2, start) infinite;
+  list-style-image: url('./images/indicator.png');
+  list-style-position: inside;
+  /* margin-left: 15px; */
+  animation: blink-animation .6s steps(2, start) infinite;
 }
+
+@keyframes blink-animation {
+  0% {
+    opacity: 1;
+  }
+
+  49% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/*Navbar Font Formating*/
+/* Font: Arcade Classic Regular */
 .navigation-box a {
     font-family: 'retro_gaming';
     font-size: 25;
@@ -186,13 +227,28 @@ body {
     box-shadow: inset 0px 50vh 40vmin 40vmin black;
     animation: rad 2s linear infinite;
 }
-@keyframes rad {
-    100% {
-        background-position: 0px 50px;
-   }
+
+/* Exchange and Shop Formating */
+/* Exchange/Shop Main */
+/* Grid */
+.exch-main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  column-gap: 3%;
+  row-gap: 3%;
+  margin: 5px;
+  text-align: center;
+  justify-content: center;
 }
 
-/* media queries */
+/* Page Header */
+h1 {
+  font-family: 'ds_bios';
+  color: #FF0000;
+  text-decoration: none;
+}
 
 @media only screen and (max-height: 700px) {
     .navigation-box {
@@ -510,3 +566,49 @@ ul li:hover .line {
     opacity: 1;
 }
 
+/* ==== Exchange/Shop Items ==== */
+.item {
+  position: relative;
+  width: auto;
+  /* width: 30%; */
+  /* min-height: 50px; */
+  /* background: green; */
+  border: red;
+  border-style: double;
+  padding: 3%;
+}
+
+.item_info {
+  min-height: fit-content;
+  padding: 5px;
+  margin: 5px;
+
+}
+/* Exchange/Shop Images */
+/* Block */
+.item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 25vh;
+  max-width: 25vw;
+  padding: 0;
+
+}
+
+/* Exchange/Shop Text */
+.item ul {
+  /* background-color: lime; */
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 0;
+}
+
+.item li {
+  font-family: 'ds_bios';
+  color: #FF0000;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 2px;
+}
