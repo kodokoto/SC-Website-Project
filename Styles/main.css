@@ -1,4 +1,6 @@
 /* ==== fonts ====  */
+
+
 @font-face {
     font-family: 'ds_bios';
     src: url('./fonts/nintendo-ds-bios-webfont.woff2') format('woff2'),
@@ -223,6 +225,13 @@ body {
     transform: translate(50%, 45%);
     box-shadow: 0px 0px 30px 30px black;
 }
+
+#news .main-content {
+    width: 50vw;
+    transform: translate(50%, 45%);
+    box-shadow: 0px 0px 30px 30px black;
+}
+
 
 
 
@@ -818,5 +827,72 @@ ul li:hover .line {
 
 .email {
     font-family: "ds_bois";
+    font-size: 17px;
+}
+
+
+
+
+/* ==== news CSS ==== */
+
+
+
+.news-content {
+    box-shadow: 15px 15px 1px 10px black;
+}
+.news {
+    position: relative;
+    border-bottom: solid maroon;
+    border-top: solid maroon;
+    margin: 1%;
+    height: fit-content;
+    width: auto;
+    padding: 1%;
+    transition: 0.5s;
+
+}
+.news:hover{
+    transform: scale(1.02);
+    border-color: red;
+}
+
+.news-headline {
+    position: relative;
+    width: 70%;
+    height: 30%;
+    padding: 1%;
+    transform: translateY(-3vh);
+    top: 0;
+    color: red;
+    font-family: 'retro_gaming';
+    letter-spacing: 2px;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+.news-headline:hover {
+    animation: blink-animation .6s steps(2, start) infinite;
+}
+
+.news-img {
+    position: absolute;
+    width: auto;
+    height: 85%;
+    top: 0%;
+    left: 70%;
+    margin: 1%;
+
+}
+.news-text {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    text-align: left;
+    padding: 1%;
+    top: 0;
+    overflow: hidden;
+    font-size: 15;
+    color: white;
+    font-family: 'ds_bios';
     font-size: 17px;
 }
