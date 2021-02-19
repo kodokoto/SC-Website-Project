@@ -1,13 +1,4 @@
-/* Head Formating */
-/*  Font */
-/* Arcade Classic Regular */
-@font-face {
-  font-family: 'arcadeclassicregular';
-  src: url('./fonts/arcadeclassic-webfont.woff2') format('woff2'),
-    url('./fonts/arcadeclassic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+/* ==== fonts ====  */
 @font-face {
     font-family: 'ds_bios';
     src: url('./fonts/nintendo-ds-bios-webfont.woff2') format('woff2'),
@@ -22,6 +13,9 @@
     font-weight: normal;
     font-style: normal;
 }
+
+Body, logo
+
 body {
     position: static;
     top: 0;
@@ -36,8 +30,6 @@ body {
 
 }
 
-/* Logo Formating */
-/* Block */
 .logo {
     display: block;
     margin-left: auto;
@@ -52,18 +44,6 @@ body {
     -ms-user-select: none;
 }
 
-@keyframes rad {
-  100% {
-    background-position: 0px 50px;
-  }
-}
-
-/* End of Grid Animation */
-
-/* Navbar Formating */
-
-/* Navbar Background */
-/* Block */
 .navigation-image {
     position: fixed;
     display: block;
@@ -78,7 +58,13 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-/* menu list */
+
+
+
+/* ==== navbar menu === */
+
+
+
 .navigation-box {
     position: fixed;
     display: block;
@@ -111,26 +97,6 @@ body {
   animation: blink-animation .6s steps(2, start) infinite;
 }
 
-@keyframes blink-animation {
-  0% {
-    opacity: 1;
-  }
-
-  49% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-/*Navbar Font Formating*/
-/* Font: Arcade Classic Regular */
 .navigation-box a {
     font-family: 'retro_gaming';
     font-size: 25;
@@ -138,6 +104,16 @@ body {
     text-decoration: none;
     position: relative;
     top: -1px; /* this centers the text with the indicator vertically */
+}
+
+@media only screen and (max-height: 700px) {
+    .navigation-box {
+    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+   
+    }
+    .navigation-image {
+    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+    }
 }
 
 @keyframes blink-animation {
@@ -158,46 +134,12 @@ body {
     }
 }
 
-/* using from opacity:0; to opacity:1; creates a really weird bug */
 
-@keyframes help-animation {
-    0% {
-        opacity: 1;
-    }
-    10% {
-        opacity: 1;
-    }
-    20% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 1;
-    }
-    40% {
-        opacity: 0.6;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    60% {
-        opacity: 0.4;
-    }
-    70% {
-        opacity: 0.3;
-    }
-    
-    80% {
-        opacity: 0.2;
-    }
-    90% {
-        opacity: 0.1;
-    }
 
-    100% {
-        opacity: 0;
-    }
-}
-/* grid animation */
+
+/* ==== grid animation ==== */
+
+
 
 .top {
     position: absolute;
@@ -211,8 +153,9 @@ body {
     transform: rotateX(-80deg) scale(2);
     transform-origin: top center;
     box-shadow: inset 0px -50vh 40vmin 40vmin black;
-    animation: rad 2s reverse linear infinite;
+    animation: to-infinity 2s reverse linear infinite;
 }
+
 .bottom {
     position: absolute;
     top: 0;
@@ -225,40 +168,20 @@ body {
     transform: rotateX(80deg) scale(2);
     transform-origin: bottom center;
     box-shadow: inset 0px 50vh 40vmin 40vmin black;
-    animation: rad 2s linear infinite;
+    animation: to-infinity 2s linear infinite;
 }
 
-/* Exchange and Shop Formating */
-/* Exchange/Shop Main */
-/* Grid */
-.exch-main {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
-  column-gap: 3%;
-  row-gap: 3%;
-  margin: 5px;
-  text-align: center;
-  justify-content: center;
-}
-
-/* Page Header */
-h1 {
-  font-family: 'ds_bios';
-  color: #FF0000;
-  text-decoration: none;
-}
-
-@media only screen and (max-height: 700px) {
-    .navigation-box {
-    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
-   
+@keyframes to-infinity {
+    100% {
+      background-position: 0px 50px;
     }
-    .navigation-image {
-    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
-    }
-}
+  }
+
+
+
+/* ==== main section ==== */
+
+
 
 .main-content {
     position: fixed;
@@ -280,7 +203,9 @@ h1 {
 .main-content::-webkit-scrollbar {
     display: none;
   }
-  
+
+/* ==== page specific changes to main-content ====  */
+
 #gallery .main-content {
     width: 70%;
     height: 60%;
@@ -299,7 +224,11 @@ h1 {
     box-shadow: 0px 0px 30px 30px black;
 }
 
+
+
 /* ==== gallery CSS ==== */
+
+
 
 .images img {
     position: relative;
@@ -317,7 +246,11 @@ h1 {
     margin-right: 3%;
 }
 
+
+
 /* ==== resrouces CSS ==== */
+
+
 
 .resources-main {
     position: relative;
@@ -399,7 +332,11 @@ h1 {
     
 }
 
+
+
 /* ==== history CSS ==== */
+
+
 
 .timeline {
     width: 100%;
@@ -550,6 +487,46 @@ ul li:hover .event{
     text-align: center;
 }
 
+/* using from opacity:0; to opacity:1; creates a really weird bug */
+
+@keyframes help-animation {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    
+    80% {
+        opacity: 0.2;
+    }
+    90% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 .line {
     position: absolute;
     width: 5px;
@@ -566,7 +543,33 @@ ul li:hover .line {
     opacity: 1;
 }
 
-/* ==== Exchange/Shop Items ==== */
+
+
+
+/* ==== Shop Items ==== */
+
+
+
+
+.exch-main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 3%;
+    row-gap: 3%;
+    margin: 5px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  /* Page Header */
+  h1 {
+    font-family: 'ds_bios';
+    color: #FF0000;
+    text-decoration: none;
+  }
+
 .item {
   position: relative;
   width: auto;
@@ -611,4 +614,100 @@ ul li:hover .line {
   text-decoration: none;
   list-style-type: none;
   padding: 2px;
+}
+
+
+
+
+/* ==== Credits CSS ==== */
+
+
+
+
+.credits-page {
+    position: relative;
+    text-align: center;
+    height: auto;
+}
+
+.character-select {
+    position: relative;
+    margin: 1%;
+    color: red;
+    font-family: 'retro_gaming';
+    width: 100%;
+    height: 50%;
+}
+
+.player {
+    position: relative;
+    height: auto;
+    width: 20%;
+    margin: 1%;
+    float: left;
+    text-align: center;
+    left: 5% ;
+    border: black;
+    border-style: dotted;
+}
+
+.player:hover{
+    border-color: red;
+    border-style: dotted;
+    border-width: 5px;
+    animation: border-blink .6s steps(2, start) infinite;
+    list-style-image: url('./images/indicator.png');
+    list-style-position: inside;
+}
+
+
+.player-img {
+    position: relative;
+    height: 60%;
+}
+.player-info {
+    position: relative;
+    font-size: 40px;
+}
+
+.player-info ul {
+    padding-left: 15px;
+}
+.player-info li {
+    margin: 10px 0;
+    list-style-type: initial;
+    list-style-position: inside;
+}
+.player-info li::marker{
+    color: black;
+}
+
+.credits {
+    position: relative;
+    color: red;
+    margin: 2%;
+    font-family: 'ds_bios';
+    text-align: center;
+    height: 50%;
+    font-size: 30px;
+    transform: rotateX(80deg) scale(2);
+}
+
+@keyframes border-blink {
+    0% {
+        border-color: black;
+        
+    }
+    49% {
+        border-color: black;
+       
+    }
+    50% {
+        border-color: red;
+        
+    }
+    100% {
+        border-color: red;
+        
+    }
 }
