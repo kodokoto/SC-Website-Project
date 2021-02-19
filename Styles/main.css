@@ -38,7 +38,7 @@ body {
     margin-top: 50;
     width: 20vw;
     z-index: 1;
-    user-drag: none; 
+    /* user-drag: none;  */
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -91,10 +91,12 @@ body {
     animation: blink-animation .6s steps(2, start) infinite;
 }
 .navigation-box a {
-    font-family: 'arcadeclassicregular';
-    font-size: 35;
+    font-family: 'retro_gaming';
+    font-size: 25;
     color: #FF0000;
     text-decoration: none;
+    position: relative;
+    top: -1px; /* this centers the text with the indicator vertically */
 }
 
 @keyframes blink-animation {
@@ -304,7 +306,7 @@ body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     font-family: 'ds_bios';
-    font-size: 17px;
+    font-size: 25px;
 }
 
 .event-tag {
