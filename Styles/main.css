@@ -213,8 +213,8 @@ body {
     left: 0;
     width: 70%;
     height: 60%;
-    border: red;
-    border-style: double;
+    /* border: red;
+    border-style: double; */
     /* border-width: 10px; */
     transform: translate(30%, 45%);
     transform-origin: top;
@@ -226,6 +226,12 @@ body {
     display: none;
 }
 
+#history .main-content {
+    width: 50vw;
+    transform: translate(50%, 45%);
+    box-shadow: 0px 0px 30px 30px black;
+    /* box-shadow: inset 0px 0px 30px 30px black; */
+}
 /* timeline */
 
 .timeline {
@@ -391,9 +397,9 @@ ul li:hover::after .event {
 .line {
     position: absolute;
     width: 5px;
-    height: 7vh;
+    height: 80px;
     background: #FF0000;
-    transform: translate(7px, -6vh);
+    transform: translate(7px, -70px);
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
