@@ -232,6 +232,12 @@ body {
     box-shadow: 0px 0px 30px 30px black;
 }
 
+#home .main-content {
+    width: 50vw;
+    transform: translate(50%, 45%);
+    box-shadow: 0px 0px 30px 30px black;
+}
+
 
 
 /* ==== home CSS ==== */
