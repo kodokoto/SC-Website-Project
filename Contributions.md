@@ -12,18 +12,21 @@ One single document is to be handed in for each group. This should be submitted 
 # Contribution details
 Each team member should fill in one box, ensure that each team member's name is written in the box with their contributions. Contribution statements need only be a sentence or two long, or a few bullet points, but should make clear what the contribution was.
 
-|Team Member|Contribution|
-|--|--| 
-|Chet Coenen - ccoen001||
+## Team Member | Contribution
+ 
+### Chet Coenen - ccoen001
 |Technical Contribution|Design Contribution|
+|--|--|
 |Github organisation||
 |Writing||
 |Coding listed pages ->||
 ||Shop Page|
 ||Exchange Page|
-|--|--|
-|Isham Bengo-Cank - ibeng001||
+
+
+### Isham Bengo-Cank - ibeng001
 |Technical Contribution|Design Contribution|
+|--|--|
 |Research|
 |Content planning|
 |Art / Photoshop|
@@ -33,9 +36,11 @@ Each team member should fill in one box, ensure that each team member's name is 
 ||Credits page|
 ||Error page|
 ||Home page|
-|--|--|
-|Jorge Martin Albeniz - jmart023||
+
+
+### Jorge Martin Albeniz - jmart023
 |Technical Contribution|Design Contribution|
+|--|--|
 |Organising the team||
 |Research||
 |Coding main page|| 
@@ -43,14 +48,16 @@ Each team member should fill in one box, ensure that each team member's name is 
 |Debugging||
 |Art / Photoshop||
 |Github||
-||Main layout design|
+|Main layout design||
+|Coding listed pages ->||
 ||Exchange page|
 ||News page|
-|Coding listed pages ->||
 ||History page|
-|--|--|
-|Nicolas Cordischi - ncord001||
+
+
+### Nicolas Cordischi - ncord001
 |Technical Contribution|Design Contribution|
+|--|--|
 |Research||
 |Content planning||
 |Writing||
@@ -58,8 +65,6 @@ Each team member should fill in one box, ensure that each team member's name is 
 ||Gallery page|
 ||Resources page|
 ||Home page|
-
-
 
 # Contribution Amount
 Fill in each team member's name in a row in the table below and how much they have contributed to the project (%). You can also highlight group members who went above and beyond in terms of their contribution. You can award between 0-2 merits.
