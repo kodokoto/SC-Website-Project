@@ -166,12 +166,17 @@ body {
     left: 0;
     width: 70%;
     height: 60%;
-    /* border: red;
-    border-style: double; */
+
     transform: translate(30%, 45%);
     transform-origin: top;
     background-color: black;
     overflow: scroll;
+}
+
+#news .main-content {
+    width: 50vw;
+    transform: translate(50%, 45%);
+    box-shadow: 0px 0px 30px 30px black;
 }
 
 ::-webkit-scrollbar {
@@ -190,32 +195,14 @@ body {
     height: fit-content;
     width: auto;
     padding: 1%;
+    transition: 0.5s;
 
 }
 .news:hover{
     transform: scale(1.02);
     border-color: red;
-    animation: border-blink .6s steps(2, start) infinite;
 }
-@keyframes border-blink {
-    0% {
-        border-color: black;
-        
-    }
-    49% {
-        border-color: black;
-       
-    }
-    50% {
-        border-color: red;
-        
-    }
-    100% {
-        border-color: red;
-        
-    }
 
-}
 .news-headline {
     position: relative;
     width: 70%;
@@ -223,19 +210,21 @@ body {
     padding: 1%;
     transform: translateY(-3vh);
     top: 0;
-    color: white;
+    color: red;
     font-family: 'retro_gaming';
     letter-spacing: 2px;
     padding-bottom: 0%;
     margin-bottom: 0%;
-
 }
+
+.news-headline:hover {
+    animation: blink-animation .6s steps(2, start) infinite;
+}
+
 .news-img {
     position: absolute;
     width: auto;
     height: 85%;
-    /* border: red;
-    border-style: double; */
     top: 0%;
     left: 70%;
     margin: 1%;
