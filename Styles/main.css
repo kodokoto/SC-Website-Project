@@ -284,7 +284,6 @@ body {
     width: auto;
     background: black;
     padding: 20px;
-    display: none;
     visibility: hidden;
     border: red;
     border-style: solid;
@@ -294,10 +293,17 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    margin: 2%;
+    margin: 3%;
     overflow: hidden;
-
+    transition: 0.5s;
 }
+
+
+ul li:hover .event{
+    visibility: visible;
+    opacity: 1;
+}
+
 .event h1 {
     font-family: 'retro_gaming';
     color: red;
@@ -359,22 +365,16 @@ body {
     text-align: center;
     font-family: 'ds_bios';
 }
-
-ul li:hover .event {
+/* 
+ul li:after .event {
     display: block;
     animation: fadein 0.5s linear forwards;
 }
 
-@keyframes fadein {
-    from {
-        visibility: inherit;
-        opacity: 0;
-    }
-    to {
-        visibility: visible;
-        opacity: 1;
-    }
-}
+ul li:hover::after .event {
+    animation: fadeout 0.5s linear forwards;
+} */
+
 
 .help-sign {
     position: relative;
@@ -391,14 +391,16 @@ ul li:hover .event {
 .line {
     position: absolute;
     width: 5px;
-    height: 6vh;
+    height: 7vh;
     background: #FF0000;
-    transform: translate(7px, -5vh);
-    visibility: 0;
+    transform: translate(7px, -6vh);
+    visibility: hidden;
     opacity: 0;
+    transition: 0.5s;
 }
 
 ul li:hover .line {
-    animation: fadein 0.5s linear forwards;
+    visibility: visible;
+    opacity: 1;
 }
 
