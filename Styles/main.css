@@ -224,7 +224,11 @@ body {
     box-shadow: 0px 0px 30px 30px black;
 }
 
-
+#home .main-content {
+    width: 50vw;
+    transform: translate(50%, 45%);
+    box-shadow: 0px 0px 30px 30px black;    
+}
 
 /* ==== gallery CSS ==== */
 
@@ -710,4 +714,32 @@ ul li:hover .line {
         border-color: red;
         
     }
+}
+.homepage {
+    position: relative;
+}
+.home-video {
+    position: relative;
+}
+.intro {
+    position: absolute;
+    text-align: center;
+    color: red;
+    font-size: 23px;
+    width: 250px;
+    left: 80vw;
+    background: black;
+    box-shadow: 15px 5px 25px 15px black;  
+    transform-origin: right center;
+    transform: translate(0, 65%) rotateY(-40deg);
+    border-style: dotted;
+    border-color: red;
+    border-width: 7px;
+    
+}
+.intro h1{
+    font-family: 'retro_gaming';
+}
+.intro p {
+    font-family: 'ds_bios';
 }
