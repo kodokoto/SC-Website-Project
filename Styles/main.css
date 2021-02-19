@@ -95,12 +95,12 @@ body {
 .navigation-box li:hover {
   list-style-image: url('./images/indicator.png');
   list-style-position: inside;
-  /* margin-left: 15px; */
   animation: blink-animation .6s steps(2, start) infinite;
 }
 
 .navigation-box a {
     font-family: 'retro_gaming';
+    /* needs units */
     font-size: 25;
     color: #FF0000;
     text-decoration: none;
@@ -254,19 +254,22 @@ body {
     position: absolute;
     text-align: center;
     color: red;
-    font-size: 19px;
+    font-size: 25px;
     width: 230px;
     left: 80vw;
-    margin-left: 17px;
+    margin-left: 35px;
     transform-origin: right center;
     transform: translate(0, 100%) rotateY(-40deg);
 }
 .intro h1{
     font-family: 'retro_gaming';
+    font-size: 16px;
 }
 .intro p {
     font-family: 'ds_bios';
 }
+
+/* positioning on small screens is wonk */
 .intro-image {
     position: fixed;
     display: block;
@@ -331,6 +334,7 @@ body {
 
 .segment h1 {
     font-family:'retro_gaming';
+    font-size: 35px;
     margin: 10px;
     width: 100%;
     color:red;
@@ -346,7 +350,7 @@ body {
 
 .segment h2{
     font-family:'retro_gaming';
-    font-size: 20px;
+    font-size: 35px;
     margin: 10px;
     width: 50%;
     color: #EF0107;
@@ -357,7 +361,7 @@ body {
 .segment li  a {
     text-decoration: none;
     font-family: 'ds_bios';
-    font-size: 17px;
+    font-size: 25px;
     color: white;
     transition: 0.5s;
 }
@@ -465,6 +469,7 @@ ul li:hover .event{
 
 .event h1 {
     font-family: 'retro_gaming';
+    font-size: 35px;
     color: red;
     margin-left: 5%;
     width: 50%;
@@ -474,6 +479,7 @@ ul li:hover .event{
     overflow-wrap: break-word;
     word-wrap: break-word;
     font-family: 'ds_bios';
+    color: white;
     font-size: 25px;
     width: 50%;
     margin-left: 2%;
@@ -481,7 +487,7 @@ ul li:hover .event{
 
 @media only screen and (max-width: 1000px) {
     .event p {
-        font-size: 17px;
+        font-size: 35px;
     }
 }
 
@@ -502,8 +508,8 @@ ul li:hover .event{
 .event-tag {
     position: relative;
     font-family: 'retro_gaming';
-    font-size: 20;
-    color: #FF0000;
+    font-size: 16px;
+    color: red;
     top: 30px;
     transform: translateX(-15px);
     text-align: center;
@@ -520,7 +526,7 @@ ul li:hover .event{
     left: 50%;
     right: 0;
     margin: auto;
-    font-size: 17px;
+    font-size: 20px;
     text-align: center;
     font-family: 'ds_bios';
 }
@@ -538,7 +544,6 @@ ul li:hover .event{
     text-align: center;
 }
 
-/* using from opacity:0; to opacity:1; creates a really weird bug */
 
 @keyframes help-animation {
     0% {
@@ -616,7 +621,8 @@ ul li:hover .line {
   
   /* Page Header */
   h1 {
-    font-family: 'ds_bios';
+    font-family: 'retro_gaming';
+    font-size: 35px;
     color: #FF0000;
     text-decoration: none;
   }
@@ -624,12 +630,14 @@ ul li:hover .line {
 .item {
   position: relative;
   width: auto;
-  /* width: 30%; */
-  /* min-height: 50px; */
-  /* background: green; */
   border: red;
   border-style: double;
   padding: 3%;
+  transition: 0.5s;
+}
+
+.item:hover {
+    transform: scale(1.03);
 }
 
 .item_info {
@@ -647,6 +655,7 @@ ul li:hover .line {
   max-height: 25vh;
   max-width: 25vw;
   padding: 0;
+  min-width: 310px
 
 }
 
@@ -661,7 +670,8 @@ ul li:hover .line {
 
 .item li {
   font-family: 'ds_bios';
-  color: #FF0000;
+  font-size:25px;
+  color:white;
   text-decoration: none;
   list-style-type: none;
   padding: 2px;
@@ -741,7 +751,7 @@ ul li:hover .line {
     text-align: center;
     height: 50%;
     font-size: 30px;
-    transform: rotateX(80deg) scale(2);
+    transform: rotateX(60deg);
 }
 
 @keyframes border-blink {
@@ -800,11 +810,12 @@ ul li:hover .line {
 .post h1 {
     margin: 10px;
     width: 50%;
+    font-size: 35px;
 }
 
 .post a:link, a:visited {
     text-decoration: none;
-    color: red;
+    color:red;
     font-family: 'retro_gaming';
 }
 
@@ -855,13 +866,13 @@ ul li:hover .line {
     color: white;
     padding: 10px;
     font-family: 'ds_bios';
-    font-size: 17px;
+    font-size: 35px;
     width: 50%;
 }
 
 .email {
     font-family: "ds_bois";
-    font-size: 17px;
+    font-size: 25px;
     transition: 0.5s;
 }
 
@@ -900,13 +911,17 @@ ul li:hover .line {
     width: 70%;
     height: 30%;
     padding: 1%;
-    transform: translateY(-3vh);
+    /* transform: translateY(-3vh); */
     top: 0;
     color: red;
     font-family: 'retro_gaming';
     letter-spacing: 2px;
     padding-bottom: 0%;
     margin-bottom: 0%;
+}
+
+.news-headline h1 {
+    font-size: 35px;
 }
 
 .news-headline:hover {
@@ -920,8 +935,8 @@ ul li:hover .line {
     top: 0%;
     left: 70%;
     margin: 1%;
-
 }
+
 .news-text {
     position: relative;
     width: 70%;
@@ -930,10 +945,9 @@ ul li:hover .line {
     padding: 1%;
     top: 0;
     overflow: hidden;
-    font-size: 15;
     color: white;
     font-family: 'ds_bios';
-    font-size: 17px;
+    font-size: 25px;
 }
 
 
