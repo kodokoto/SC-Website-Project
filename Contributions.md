@@ -65,8 +65,8 @@ Fill in each team member's name in a row in the table below and how much they ha
 |Team Member|Contribution Amount (%)|Merit?|
 |--|--|--|
 |Chet Coenen|25%|N|
-|Isham Bengo-Cank|25%|Y|
-|Jorge Martin Albeniz |25%|Y|
+|Isham Bengo-Cank|25%|**Y**|
+|Jorge Martin Albeniz |25%|**Y**|
 |Nicolas Cordischi|25%|N|
 
 # Confirmation
