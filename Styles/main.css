@@ -1,38 +1,43 @@
 /* Head Formating */
-  /*  Font */
-    /* Arcade Classic Regular */
+/*  Font */
+/* Arcade Classic Regular */
 @font-face {
   font-family: 'arcadeclassicregular';
   src: url('./fonts/arcadeclassic-webfont.woff2') format('woff2'),
-       url('./fonts/arcadeclassic-webfont.woff') format('woff');
+    url('./fonts/arcadeclassic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-    /* DS Bios */
+
+/* DS Bios */
 @font-face {
   font-family: 'ds_bios';
   src: url('./fonts/nintendo-ds-bios-webfont.woff2') format('woff2'),
-       url('./fonts/nintendo-ds-bios-webfont.woff') format('woff');
+    url('./fonts/nintendo-ds-bios-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-  /* Retro Gaming */
+
+/* Retro Gaming */
 @font-face {
   font-family: 'retro_gaming';
   src: url('./fonts/retro_gaming-webfont.woff2') format('woff2'),
-       url('./fonts/retro_gaming-webfont.woff') format('woff');
+    url('./fonts/retro_gaming-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
 @media only screen and (max-height: 700px) {
   .navigation-box {
-  transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
- 
+    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+
   }
+
   .navigation-image {
-  transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
   }
 }
+
 /* End of Head Formating */
 
 /* Body Formating */
@@ -49,7 +54,8 @@ body {
   overflow: hidden;
 
 }
-  /* Top Formating */
+
+/* Top Formating */
 .top {
   position: absolute;
   top: 0;
@@ -58,13 +64,15 @@ body {
   left: 0;
   margin: auto;
   background-size: 50px 50px;
-  background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent);
+  background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent);
   transform: rotateX(-80deg) scale(2);
   transform-origin: top center;
   box-shadow: inset 0px -50vh 40vmin 40vmin #000;
   animation: rad 2s reverse linear infinite;
 }
-  /* Logo Formating */
+
+/* Logo Formating */
+/* Block */
 .logo {
   display: block;
   margin-left: auto;
@@ -73,9 +81,10 @@ body {
   width: 20vw;
   z-index: 1;
 }
-  /* End of Top Formating */
 
-  /* Bottom Formating */
+/* End of Top Formating */
+
+/* Bottom Formating */
 .bottom {
   position: absolute;
   top: 0;
@@ -90,33 +99,39 @@ body {
   box-shadow: inset 0px 50vh 40vmin 40vmin #000;
   animation: rad 2s linear infinite;
 }
-  /* End of Bottom Formating */
-  /* Grid Animation */
+
+/* End of Bottom Formating */
+/* Grid Animation */
 @keyframes rad {
   100% {
-      background-position: 0px 50px;
- }
-}
-@keyframes rad {
-  100% {
-    background-position : 0px 50px;
+    background-position: 0px 50px;
   }
 }
-  /* End of Grid Animation */
 
-  /* Navbar Formating */
+@keyframes rad {
+  100% {
+    background-position: 0px 50px;
+  }
+}
 
-    /* Navbar Background */
+/* End of Grid Animation */
+
+/* Navbar Formating */
+
+/* Navbar Background */
+/* Block */
 .navigation-image {
   position: fixed;
   display: block;
   transform-origin: left center;
   width: 275px;
   top: 50%;
-  left: 3vw; 
+  left: 3vw;
   transform: translate(0, -50%) rotateY(40deg);
 }
-    /* Navbar List Container */
+
+/* Navbar List Container */
+/* Block */
 .navigation-box {
   position: fixed;
   display: block;
@@ -124,54 +139,61 @@ body {
   top: 50%;
   left: 3vw;
   transform: translate(0, -50%) rotateY(40deg);
-  padding-left: 15px; 
+  padding-left: 15px;
   padding-bottom: 25px;
   transform-origin: left center;
 }
-    /* Navbar List */
+
+/* Navbar List */
 .navigation-box ul {
   padding-left: 15px;
 }
-    /* Navbar List Items */
+
+/* Navbar List Items */
 .navigation-box li {
   margin: 10px 0;
   list-style-type: none;
 }
-    /* Navbar Hover */
+
+/* Navbar Hover */
 .navigation-box li:hover {
   list-style-image: url('./images/indicator.png');
   list-style-position: inside;
   /* margin-left: 15px; */
   animation: blink-animation .6s steps(2, start) infinite;
 }
+
 @keyframes blink-animation {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
-  
+
   49% {
-      opacity: 1;
+    opacity: 1;
   }
-  
+
   50% {
-      opacity: 0;
+    opacity: 0;
   }
 
   100% {
-      opacity: 0;
+    opacity: 0;
   }
 }
-    /*Navbar Font Formating*/
-      /* Font: Arcade Classic Regular */
+
+/*Navbar Font Formating*/
+/* Font: Arcade Classic Regular */
 .navigation-box a {
   font-family: 'arcadeclassicregular';
   font-size: 35;
   color: #FF0000;
   text-decoration: none;
 }
-  /* End Navbar Formating */
 
-  /* Main Content Formating */
+/* End Navbar Formating */
+
+/* Main Content Formating */
+/* Block */
 .main-content {
   position: fixed;
   display: block;
@@ -186,28 +208,38 @@ body {
   left: 25%;
   background-color: black;
   overflow: scroll;
-  box-shadow: 15px 5px 25px 15px black;    
+  box-shadow: 15px 5px 25px 15px black;
 }
 
-  /* Scrollbar Formating */
+/* Scrollbar Formating */
+/* Hidden */
 .main-content::-webkit-scrollbar {
   display: none;
 }
 
-    /* Exchange Formating */
-      /* Exchange Main */
-.shop-main {
+/* Exchange and Shop Formating */
+/* Exchange/Shop Main */
+/* Grid */
+.exch-main {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows:  50% 50%;
+  grid-template-rows: auto auto auto auto;
   column-gap: 3%;
   row-gap: 3%;
   margin: 5px;
   text-align: center;
   justify-content: center;
 }
-      /* Exchange Items */
+
+/* Page Header */
+h1 {
+  font-family: 'ds_bios';
+  color: #FF0000;
+  text-decoration: none;
+}
+
+/* Exchange/Shop Items */
 .item {
   position: relative;
   width: auto;
@@ -218,47 +250,57 @@ body {
   border-style: double;
   padding: 3%;
 }
-      /* Exchange Images */
+
+.item_info {
+  min-height: fit-content;
+  padding: 5px;
+  margin: 5px;
+
+}
+/* Exchange/Shop Images */
+/* Block */
 .item img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 80%;
-  width: max-content;
+  max-height: 25vh;
+  max-width: 25vw;
   padding: 0;
 
 }
-      /* Exchange Text */
+
+/* Exchange/Shop Text */
+.item ul {
+  /* background-color: lime; */
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 0;
+}
+
 .item li {
   font-family: 'ds_bios';
   color: #FF0000;
   text-decoration: none;
   list-style-type: none;
+  padding: 2px;
 }
-.item ul {
-  text-align: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-}
-    /* End of Exchange Formating */
+/* End of Exchange/Shop Formating */
 
-    /* Gallery Formating */
+/* Gallery Formating */
 #gallery .main-content {
   width: 70%;
   height: 60%;
   border-radius: 10%;
 }
-    /* Gallery Images*/
+
+/* Gallery Images*/
 .images img {
   position: relative;
   flex-shrink: inherit;
   border-radius: 23%;
   width: 49%;
-  height: 94%; 
-  
-   
+  height: 94%;
 }
 
 .images div {
@@ -267,6 +309,7 @@ body {
   margin-bottom: 3%;
   margin-right: 3%;
 }
-    /* End of Gallery Formating */
-  /* End of Main Content Formating */
+
+/* End of Gallery Formating */
+/* End of Main Content Formating */
 /* End of Body Formating */
