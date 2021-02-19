@@ -359,10 +359,11 @@ body {
     font-family: 'ds_bios';
     font-size: 17px;
     color: white;
+    transition: 0.5s;
 }
 
 .segment li a:hover {
-    animation: red-fade 0.5s linear forwards;
+    color: red;
 }
 
 /* have to use keyframes ove transition because transiotion hasa reload bug that cant be fixed without using js */
@@ -375,14 +376,6 @@ body {
     }
 }
 
-@keyframes red-fade {
-    from {
-        color: white;
-    }
-    to {
-        color: red;
-    }
-}
 
 .resources-link ul {
     list-style-type: square;
@@ -850,20 +843,12 @@ ul li:hover .line {
 
 .info a {
     font-size: 12px;
+    transition: 0.5s;
 }
 
 .info a:hover {
-    animation: white-fade 0.5s linear forwards;
-}
-
-/* have to use keyframes ove transition because transiotion hasa reload bug that cant be fixed without using js */
-@keyframes white-fade {
-    from {
-        color: red;
-    }
-    to {
-        color: white;
-    }
+    /* animation: white-fade 0.5s linear forwards; */
+    color: white;
 }
 
 .text {
@@ -877,6 +862,11 @@ ul li:hover .line {
 .email {
     font-family: "ds_bois";
     font-size: 17px;
+    transition: 0.5s;
+}
+
+.email:hover {
+    color: white;
 }
 
 
