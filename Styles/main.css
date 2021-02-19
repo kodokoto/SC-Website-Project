@@ -301,12 +301,37 @@ body {
 .event h1 {
     font-family: 'retro_gaming';
     color: red;
+    margin-left: 5%;
+    width: 50%;
 }
 .event p {
+    position: relative;
     overflow-wrap: break-word;
     word-wrap: break-word;
     font-family: 'ds_bios';
     font-size: 25px;
+    width: 50%;
+    margin-left: 2%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .event p {
+        font-size: 17px;
+    }
+}
+
+.event img {
+    max-height: 80%;
+    min-height: 80%;
+    max-width: 40%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: -10%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin: auto;
 }
 
 .event-tag {
@@ -317,6 +342,22 @@ body {
     top: 30px;
     transform: translateX(-15px);
     text-align: center;
+}
+
+.pic-info {
+    max-height: 70%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 92%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin: auto;
+    font-size: 17px;
+    text-align: center;
+    font-family: 'ds_bios';
 }
 
 ul li:hover .event {
