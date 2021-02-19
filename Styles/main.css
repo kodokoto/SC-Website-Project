@@ -1,10 +1,4 @@
-@font-face {
-    font-family: 'arcadeclassicregular';
-    src: url('./fonts/arcadeclassic-webfont.woff2') format('woff2'),
-         url('./fonts/arcadeclassic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+/* ==== fonts ====  */
 @font-face {
     font-family: 'ds_bios';
     src: url('./fonts/nintendo-ds-bios-webfont.woff2') format('woff2'),
@@ -19,6 +13,9 @@
     font-weight: normal;
     font-style: normal;
 }
+
+Body, logo
+
 body {
     position: static;
     top: 0;
@@ -32,6 +29,7 @@ body {
     overflow: hidden;
 
 }
+
 .logo {
     display: block;
     margin-left: auto;
@@ -39,11 +37,13 @@ body {
     margin-top: 50;
     width: 20vw;
     z-index: 1;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
-/* menu navbar */
-
-/* background image of the menu */
 .navigation-image {
     position: fixed;
     display: block;
@@ -52,8 +52,19 @@ body {
     top: 50%;
     left: 3vw; 
     transform: translate(0, -50%) rotateY(40deg);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
-/* menu list */
+
+
+
+/* ==== navbar menu === */
+
+
+
 .navigation-box {
     position: fixed;
     display: block;
@@ -66,20 +77,26 @@ body {
     transform-origin: left center;
     color: red;
 }
+
+/* Navbar List */
 .navigation-box ul {
-    padding-left: 15px;
+  padding-left: 15px;
 }
+
+/* Navbar List Items */
 .navigation-box li {
-    margin: 10px 0;
-    list-style-type: none;
+  margin: 10px 0;
+  list-style-type: none;
 }
-/* this adds blink animation and finger at hover */
+
+/* Navbar Hover */
 .navigation-box li:hover {
-    list-style-image: url('./images/indicator.png');
-    list-style-position: inside;
-    /* margin-left: 15px; */
-    animation: blink-animation .6s steps(2, start) infinite;
+  list-style-image: url('./images/indicator.png');
+  list-style-position: inside;
+  /* margin-left: 15px; */
+  animation: blink-animation .6s steps(2, start) infinite;
 }
+
 .navigation-box a {
     font-family: 'retro_gaming';
     font-size: 25;
@@ -88,61 +105,6 @@ body {
     position: relative;
     top: -1px; /* this centers the text with the indicator vertically */
 }
-
-@keyframes blink-animation {
-    0% {
-        opacity: 1;
-    }
-    
-    49% {
-        opacity: 1;
-    }
-    
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-/* grid animation */
-
-.top {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    background-size: 50px 50px;
-    background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%,#FF0000 75%,#FF0000 76%, #FF0000 77%, transparent 82%, transparent);
-    transform: rotateX(-80deg) scale(2);
-    transform-origin: top center;
-    box-shadow: inset 0px -50vh 40vmin 40vmin black;
-    animation: rad 2s reverse linear infinite;
-}
-.bottom {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    background-size: 50px 50px;
-    background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 69%, #FF0000 74%, #FF0000 75%, #FF0000 76%, #FF0000 77%, transparent 82%, transparent);
-    transform: rotateX(80deg) scale(2);
-    transform-origin: bottom center;
-    box-shadow: inset 0px 50vh 40vmin 40vmin black;
-    animation: rad 2s linear infinite;
-}
-@keyframes rad {
-    100% {
-        background-position: 0px 50px;
-   }
-}
-
-/* media queries */
 
 @media only screen and (max-height: 700px) {
     .navigation-box {
@@ -153,6 +115,73 @@ body {
     transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
     }
 }
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+    }
+    
+    49% {
+        opacity: 0.9;
+    }
+    
+    50% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+/* ==== grid animation ==== */
+
+
+
+.top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-size: 50px 50px;
+    background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, transparent 82%), linear-gradient(90deg, transparent 69%, #FF0000 74%, transparent 82%);
+    transform: rotateX(-80deg) scale(2);
+    transform-origin: top center;
+    box-shadow: inset 0px -50vh 40vmin 40vmin black;
+    animation: to-infinity 2s reverse linear infinite;
+}
+
+.bottom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-size: 50px 50px;
+    background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, transparent 82%), linear-gradient(90deg, transparent 69%, #FF0000 74%, transparent 82%);
+    transform: rotateX(80deg) scale(2);
+    transform-origin: bottom center;
+    box-shadow: inset 0px 50vh 40vmin 40vmin black;
+    animation: to-infinity 2s linear infinite;
+}
+
+@keyframes to-infinity {
+    100% {
+      background-position: 0px 50px;
+    }
+  }
+
+
+
+/* ==== main section ==== */
+
+
 
 .main-content {
     position: fixed;
@@ -174,15 +203,33 @@ body {
 .main-content::-webkit-scrollbar {
     display: none;
   }
-  
+
+/* ==== page specific changes to main-content ====  */
+
 #gallery .main-content {
     width: 70%;
     height: 60%;
     border-radius: 10%;
 }
 
+#resources .main-content {
+    width: 50vw;
+    transform: translate(50%, 45%);
+    box-shadow: 0px 0px 30px 30px black;
+}
 
-/*images editing*/
+#history .main-content {
+    width: 50vw;
+    transform: translate(50%, 45%);
+    box-shadow: 0px 0px 30px 30px black;
+}
+
+
+
+/* ==== gallery CSS ==== */
+
+
+
 .images img {
     position: relative;
     flex-shrink: inherit;
@@ -199,26 +246,15 @@ body {
     margin-right: 3%;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
 
-#resources .main-content {
-    width: 50vw;
-    transform: translate(50%, 45%);
-    box-shadow: 0px 0px 30px 30px black;
-}
 
-.exchange-main {
-    position: relative;
-    margin: 1%;
-    border:#FF0000;
-}
+/* ==== resrouces CSS ==== */
+
+
 
 .resources-main {
     position: relative;
     margin: 1%;
-    
 }
 
 .segment {
@@ -298,3 +334,380 @@ body {
 
 
 
+/* ==== history CSS ==== */
+
+
+
+.timeline {
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    color: wheat;
+}
+
+
+.timeline-bar {
+    position: relative;
+    width: 4000px;
+    height: 10px;
+    background: red;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 70%;
+}
+
+
+.timeline ul {
+    margin: 0;
+    display: flex;
+    position: relative;
+    bottom: 50%;
+}
+
+.timeline ul li {
+    display: block;
+    position: relative;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: red;
+    margin: 0 20px;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 30px;
+    margin-right: 200px;
+    box-shadow: 0 0 0 4px #000, 0 0 0 4px red;
+}
+.timeline ul li:hover {
+    background: red;
+    box-shadow: 0 0 0 8px #000, 0 0 0 4px red;
+}
+
+.event {
+    position: fixed;
+    height: 50%;
+    width: auto;
+    background: black;
+    padding: 20px;
+    visibility: hidden;
+    border: red;
+    border-style: solid;
+    border-radius: 4px;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 3%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+
+ul li:hover .event{
+    visibility: visible;
+    opacity: 1;
+}
+
+.event h1 {
+    font-family: 'retro_gaming';
+    color: red;
+    margin-left: 5%;
+    width: 50%;
+}
+.event p {
+    position: relative;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-family: 'ds_bios';
+    font-size: 25px;
+    width: 50%;
+    margin-left: 2%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .event p {
+        font-size: 17px;
+    }
+}
+
+.event img {
+    max-height: 80%;
+    min-height: 80%;
+    max-width: 40%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: -10%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin: auto;
+}
+
+.event-tag {
+    position: relative;
+    font-family: 'retro_gaming';
+    font-size: 20;
+    color: #FF0000;
+    top: 30px;
+    transform: translateX(-15px);
+    text-align: center;
+}
+
+.pic-info {
+    max-height: 70%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 92%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin: auto;
+    font-size: 17px;
+    text-align: center;
+    font-family: 'ds_bios';
+}
+
+
+.help-sign {
+    position: relative;
+    font-family: 'retro_gaming';
+    font-size: 2vw;
+    color: #FF0000;
+    animation: help-animation 1s steps(2, start) infinite;
+    transform: translateY(-15%);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* using from opacity:0; to opacity:1; creates a really weird bug */
+
+@keyframes help-animation {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    
+    80% {
+        opacity: 0.2;
+    }
+    90% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.line {
+    position: absolute;
+    width: 5px;
+    height: 80px;
+    background: #FF0000;
+    transform: translate(7px, -70px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+ul li:hover .line {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+/* ==== Shop Items ==== */
+
+
+
+
+.exch-main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 3%;
+    row-gap: 3%;
+    margin: 5px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  /* Page Header */
+  h1 {
+    font-family: 'ds_bios';
+    color: #FF0000;
+    text-decoration: none;
+  }
+
+.item {
+  position: relative;
+  width: auto;
+  /* width: 30%; */
+  /* min-height: 50px; */
+  /* background: green; */
+  border: red;
+  border-style: double;
+  padding: 3%;
+}
+
+.item_info {
+  min-height: fit-content;
+  padding: 5px;
+  margin: 5px;
+
+}
+/* Exchange/Shop Images */
+/* Block */
+.item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 25vh;
+  max-width: 25vw;
+  padding: 0;
+
+}
+
+/* Exchange/Shop Text */
+.item ul {
+  /* background-color: lime; */
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 0;
+}
+
+.item li {
+  font-family: 'ds_bios';
+  color: #FF0000;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 2px;
+}
+
+
+
+
+/* ==== Credits CSS ==== */
+
+
+
+
+.credits-page {
+    position: relative;
+    text-align: center;
+    height: auto;
+}
+
+.character-select {
+    position: relative;
+    margin: 1%;
+    color: red;
+    font-family: 'retro_gaming';
+    width: 100%;
+    height: 50%;
+}
+
+.player {
+    position: relative;
+    height: auto;
+    width: 20%;
+    margin: 1%;
+    float: left;
+    text-align: center;
+    left: 5% ;
+    border: black;
+    border-style: dotted;
+}
+
+.player:hover{
+    border-color: red;
+    border-style: dotted;
+    border-width: 5px;
+    animation: border-blink .6s steps(2, start) infinite;
+    list-style-image: url('./images/indicator.png');
+    list-style-position: inside;
+}
+
+
+.player-img {
+    position: relative;
+    height: 60%;
+}
+.player-info {
+    position: relative;
+    font-size: 40px;
+}
+
+.player-info ul {
+    padding-left: 15px;
+}
+.player-info li {
+    margin: 10px 0;
+    list-style-type: initial;
+    list-style-position: inside;
+}
+.player-info li::marker{
+    color: black;
+}
+
+.credits {
+    position: relative;
+    color: red;
+    margin: 2%;
+    font-family: 'ds_bios';
+    text-align: center;
+    height: 50%;
+    font-size: 30px;
+    transform: rotateX(80deg) scale(2);
+}
+
+@keyframes border-blink {
+    0% {
+        border-color: black;
+        
+    }
+    49% {
+        border-color: black;
+       
+    }
+    50% {
+        border-color: red;
+        
+    }
+    100% {
+        border-color: red;
+        
+    }
+}
