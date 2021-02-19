@@ -39,7 +39,6 @@ body {
     margin-top: 50;
     width: 20vw;
     z-index: 1;
-    /* user-drag: none;  */
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -58,7 +57,6 @@ body {
     top: 50%;
     left: 3vw; 
     transform: translate(0, -50%) rotateY(40deg);
-    user-drag: none; 
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
