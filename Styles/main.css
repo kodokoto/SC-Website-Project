@@ -224,6 +224,7 @@ body {
     width: 50vw;
     transform: translate(50%, 45%);
     box-shadow: 0px 0px 30px 30px black;
+    overflow-y: hidden;
 }
 
 #news .main-content {
@@ -251,20 +252,20 @@ body {
     position: relative;
 }
 .intro {
-    position: absolute;
-    text-align: center;
-    color: red;
-    font-size: 25px;
-    width: 230px;
-    left: 80vw;
-    margin-left: 35px;
+    position: fixed;
+    display: block;
+    width: 200px;
+    top: 50%;
+    right: 5vw;
+    transform: translate(0, -50%) rotateY(-40deg);
+    /* padding-left: 15px;  */
+    padding-bottom: 25px;
     transform-origin: right center;
-    transform: translate(0, 100%) rotateY(-40deg);
+    color: red;
+    font-size: 20px;
+    /* overflow: hidden; */
 }
-.intro h1{
-    font-family: 'retro_gaming';
-    font-size: 16px;
-}
+
 .intro p {
     font-family: 'ds_bios';
 }
@@ -275,10 +276,9 @@ body {
     display: block;
     transform-origin: right center;
     width: 275px;
-    height: auto;
-    top: 2%;
-    left: 80vw; 
-    transform: translate(0, 53%) rotateY(-40deg);
+    top: 50%;
+    right: 3vw; 
+    transform: translate(0, -50%) rotateY(-40deg);
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -646,7 +646,7 @@ ul li:hover .line {
   margin: 5px;
 
 }
-/* Exchange/Shop Images */
+/* Shop Images */
 /* Block */
 .item img {
   display: block;
@@ -659,7 +659,7 @@ ul li:hover .line {
 
 }
 
-/* Exchange/Shop Text */
+/* Shop Text */
 .item ul {
   /* background-color: lime; */
   text-align: center;
@@ -689,6 +689,7 @@ ul li:hover .line {
     position: relative;
     text-align: center;
     height: auto;
+    overflow: hidden;
 }
 
 .character-select {
@@ -778,6 +779,7 @@ ul li:hover .line {
     width: 50vw;
     transform: translate(50%, 45%);
     box-shadow: 0px 0px 30px 30px black;
+    overflow-x: hidden;
 }
 
 /* ==== exchange CSS ==== */
@@ -827,11 +829,13 @@ ul li:hover .line {
     position: absolute;
     left: 60%;
     max-height:85%;
+    max-width: 40%;
     margin: 0;
     top: 50%;
     transform: translateY(-50%);
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 .info {
@@ -872,7 +876,7 @@ ul li:hover .line {
 
 .email {
     font-family: "ds_bois";
-    font-size: 25px;
+    font-size: 20px;
     transition: 0.5s;
 }
 
