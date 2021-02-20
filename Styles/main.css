@@ -16,7 +16,7 @@
     font-style: normal;
 }
 
-Body, logo
+/* ==== Body & logo ==== */
 
 body {
     position: static;
@@ -80,18 +80,16 @@ body {
     color: red;
 }
 
-/* Navbar List */
+
 .navigation-box ul {
   padding-left: 15px;
 }
 
-/* Navbar List Items */
 .navigation-box li {
   margin: 10px 0;
   list-style-type: none;
 }
 
-/* Navbar Hover */
 .navigation-box li:hover {
   list-style-image: url('./images/indicator.png');
   list-style-position: inside;
@@ -100,7 +98,6 @@ body {
 
 .navigation-box a {
     font-family: 'retro_gaming';
-    /* needs units */
     font-size: 25;
     color: #FF0000;
     text-decoration: none;
@@ -108,16 +105,7 @@ body {
     top: -1px; /* this centers the text with the indicator vertically */
 }
 
-@media only screen and (max-height: 700px) {
-    .navigation-box {
-    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
-   
-    }
-    .navigation-image {
-    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
-    }
-}
-
+/* had to use 1, 0.9, 0.1, 0 because just 1 to 0 had a werid bug where instead of flashing to black it would just become darker */
 @keyframes blink-animation {
     0% {
         opacity: 1;
@@ -139,7 +127,7 @@ body {
 
 
 
-/* ==== grid animation ==== */
+/* ==== grid animation & shadow ==== */
 
 
 
@@ -149,11 +137,11 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+    transform-origin: top center;
+    transform: rotateX(-80deg) scale(2);
     margin: auto;
     background-size: 50px 50px;
     background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, transparent 82%), linear-gradient(90deg, transparent 69%, #FF0000 74%, transparent 82%);
-    transform: rotateX(-80deg) scale(2);
-    transform-origin: top center;
     box-shadow: inset 0px -50vh 40vmin 40vmin black;
     animation: to-infinity 2s reverse linear infinite;
 }
@@ -164,6 +152,8 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+    transform-origin: bottom center;
+    transform: rotateX(80deg) scale(2);
     margin: auto;
     background-size: 50px 50px;
     background-image: linear-gradient(0deg, transparent 69%, #FF0000 74%, transparent 82%), linear-gradient(90deg, transparent 69%, #FF0000 74%, transparent 82%);
@@ -202,7 +192,7 @@ body {
 }
 
 /* remove scrollbar */
-.main-content::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
   }
 
@@ -239,6 +229,13 @@ body {
     box-shadow: 0px 0px 30px 30px black;
 }
 
+#exchange .main-content {
+    width: 50vw;
+    transform: translate(50%, 45%);
+    box-shadow: 0px 0px 30px 30px black;
+    overflow-x: hidden;
+}
+
 
 
 /* ==== home CSS ==== */
@@ -258,19 +255,13 @@ body {
     top: 50%;
     right: 5vw;
     transform: translate(0, -50%) rotateY(-40deg);
-    /* padding-left: 15px;  */
     padding-bottom: 25px;
     transform-origin: right center;
     color: red;
     font-size: 20px;
-    /* overflow: hidden; */
-}
-
-.intro p {
     font-family: 'ds_bios';
 }
 
-/* positioning on small screens is wonk */
 .intro-image {
     position: fixed;
     display: block;
@@ -297,8 +288,6 @@ body {
     border-radius: 23%;
     width: 49%;
     height: 94%; 
-    
-     
 }
 .images div {
     margin-top: 3%;
@@ -328,9 +317,6 @@ body {
     border-top: dotted maroon;
     transition: 0.5s;
 }
-
-/* forced to use transition because keyframes cant have reverse animation on mouse out, and it looks janky */
-/* refresh bug is still there, but it doesnt look too bad */
 
 .segment h1 {
     font-family:'retro_gaming';
@@ -370,21 +356,10 @@ body {
     color: red;
 }
 
-/* have to use keyframes ove transition because transiotion hasa reload bug that cant be fixed without using js */
-@keyframes white-fade {
-    from {
-        color: red;
-    }
-    to {
-        color: white;
-    }
-}
-
 
 .resources-link ul {
     list-style-type: square;
     color:maroon;
-    
 }
 
 
@@ -436,10 +411,13 @@ body {
     margin-right: 200px;
     box-shadow: 0 0 0 4px #000, 0 0 0 4px red;
 }
+
+/* little bit of animation on the list hover  */
 .timeline ul li:hover {
     background: red;
     box-shadow: 0 0 0 8px #000, 0 0 0 4px red;
 }
+
 
 .event {
     position: fixed;
@@ -471,8 +449,10 @@ ul li:hover .event{
     font-family: 'retro_gaming';
     font-size: 35px;
     color: red;
-    margin-left: 5%;
+    margin-left: 2%;
+    top: -2%;
     width: 50%;
+    /* flex-shrink: inherit; */
 }
 .event p {
     position: relative;
@@ -487,7 +467,10 @@ ul li:hover .event{
 
 @media only screen and (max-width: 1000px) {
     .event p {
-        font-size: 35px;
+        font-size: 16px;
+    }
+    .pic-info {
+        font-size: 16px;
     }
 }
 
@@ -544,44 +527,6 @@ ul li:hover .event{
     text-align: center;
 }
 
-
-@keyframes help-animation {
-    0% {
-        opacity: 1;
-    }
-    10% {
-        opacity: 1;
-    }
-    20% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 1;
-    }
-    40% {
-        opacity: 0.6;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    60% {
-        opacity: 0.4;
-    }
-    70% {
-        opacity: 0.3;
-    }
-    
-    80% {
-        opacity: 0.2;
-    }
-    90% {
-        opacity: 0.1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
 
 .line {
     position: absolute;
@@ -655,13 +600,13 @@ ul li:hover .line {
   max-height: 25vh;
   max-width: 25vw;
   padding: 0;
-  min-width: 310px
-
+  min-width: 310px;
+  /* flex-shrink: inherit; */
 }
 
 /* Shop Text */
+
 .item ul {
-  /* background-color: lime; */
   text-align: center;
   justify-content: center;
   padding: 5px;
@@ -755,34 +700,14 @@ ul li:hover .line {
     transform: rotateX(60deg);
 }
 
-@keyframes border-blink {
-    0% {
-        border-color: black;
-        
-    }
-    49% {
-        border-color: black;
-       
-    }
-    50% {
-        border-color: red;
-        
-    }
-    100% {
-        border-color: red;
-        
-    }
-}
 
 
-#exchange .main-content {
-    width: 50vw;
-    transform: translate(50%, 45%);
-    box-shadow: 0px 0px 30px 30px black;
-    overflow-x: hidden;
-}
+
 
 /* ==== exchange CSS ==== */
+
+
+
 
 .exchange-main {
     position: relative;
@@ -800,9 +725,6 @@ ul li:hover .line {
     border-top: solid maroon;
     transition: 0.5s;
 }
-
-/* forced to use transition because keyframes cant have reverse animation on mouse out, and it looks janky */
-/* refresh bug is still there, but it doesnt look too bad */
 
 .post:hover{
     transform: scale(1.02);
@@ -862,7 +784,6 @@ ul li:hover .line {
 }
 
 .info a:hover {
-    /* animation: white-fade 0.5s linear forwards; */
     color: white;
 }
 
@@ -912,10 +833,9 @@ ul li:hover .line {
 
 .news-headline {
     position: relative;
-    width: 70%;
+    width: 55%;
     height: 30%;
     padding: 1%;
-    /* transform: translateY(-3vh); */
     top: 0;
     color: red;
     font-family: 'retro_gaming';
@@ -933,17 +853,23 @@ ul li:hover .line {
 }
 
 .news-img {
-    position: absolute;
+    max-height: 60%;
+    min-height:
+    max-width: 30%;
     width: auto;
-    height: 85%;
-    top: 0%;
-    left: 70%;
-    margin: 1%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 60%;
+    right: 0;
+    margin: auto;
+    flex-shrink: inherit;
 }
 
 .news-text {
     position: relative;
-    width: 70%;
+    width: 55%;
     height: 70%;
     text-align: left;
     padding: 1%;
@@ -964,5 +890,146 @@ ul li:hover .line {
     color: red;
     text-align: center;
     top: 40%;
+    font-family: "retro_gaming";
     font-size: 20px;
 }
+
+
+/* ==== animations ==== */
+
+
+@keyframes border-blink {
+    0% {
+        border-color: black;
+        
+    }
+    49% {
+        border-color: black;
+       
+    }
+    50% {
+        border-color: red;
+        
+    }
+    100% {
+        border-color: red;
+        
+    }
+}
+
+/* using from and to has this bug where the text is darker */
+/* forced to do this ugly animation, trying to make it as smooth as possible */
+
+@keyframes help-animation {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    
+    80% {
+        opacity: 0.2;
+    }
+    90% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* ==== media queries ==== */
+
+
+
+/* make navbar smaller when the screen height is smaller than 700px vertically */
+
+@media only screen and (max-height: 700px) {
+    .navigation-box {
+    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+   
+    }
+    .navigation-image {
+    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+    }
+    
+    #home .intro {
+        transform: translate(0, -50%) rotateY(-40deg) scale(0.65, 0.65);
+       
+        }
+    #home .intro-image {
+    transform: translate(0, -50%) rotateY(-40deg) scale(0.65, 0.65);
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .navigation-box {
+    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+   
+    }
+    .navigation-image {
+    transform: translate(0, -50%) rotateY(40deg) scale(0.65, 0.65);
+    }
+
+    #home .intro {
+        transform: translate(0, -50%) rotateY(-40deg) scale(0.65, 0.65);
+       
+        }
+    
+    #home .intro-image {
+    transform: translate(0, -50%) rotateY(-40deg) scale(0.65, 0.65);
+    }
+    .news-img , .post img {
+        display: none;
+    }
+    .news-text, .news-headline, .text, .post h1 {
+        width: 100%;
+    }
+    .event {
+        transform: translateY(-10%);
+        overflow: scroll;  
+    }
+    .event h1 {
+        font-size: 17px;
+        width: 50%;
+    }
+    .event p {
+        font-size: 20px;
+    }
+    .pic-info {
+        display: none;
+    }
+    #history .main-content {
+        width: 70vw;
+
+        transform: translate(35%, 45%);
+    }
+    .item li {
+        font-size: 17px;
+    }
+    .player-info {
+        font-size: 17px;
+    }
+}
+
