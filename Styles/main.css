@@ -851,7 +851,6 @@ ul li:hover .line {
 
 .news-img {
     max-height: 60%;
-    min-height:
     max-width: 30%;
     width: auto;
     height: auto;
@@ -1036,7 +1035,6 @@ ul li:hover .line {
     }
     #history .main-content {
         width: 70vw;
-
         transform: translate(35%, 45%);
     }
     .item li {
