@@ -452,8 +452,8 @@ ul li:hover .event{
     margin-left: 2%;
     top: -2%;
     width: 50%;
-    /* flex-shrink: inherit; */
 }
+
 .event p {
     position: relative;
     overflow-wrap: break-word;
@@ -504,7 +504,7 @@ ul li:hover .event{
     width: auto;
     height: auto;
     position: absolute;
-    top: 92%;
+    top: 90%;
     bottom: 0;
     left: 50%;
     right: 0;
@@ -564,7 +564,6 @@ ul li:hover .line {
     justify-content: center;
   }
   
-  /* Page Header */
   h1 {
     font-family: 'retro_gaming';
     font-size: 35px;
@@ -591,8 +590,7 @@ ul li:hover .line {
   margin: 5px;
 
 }
-/* Shop Images */
-/* Block */
+
 .item img {
   display: block;
   margin-left: auto;
@@ -601,10 +599,8 @@ ul li:hover .line {
   max-width: 25vw;
   padding: 0;
   min-width: 310px;
-  /* flex-shrink: inherit; */
 }
 
-/* Shop Text */
 
 .item ul {
   text-align: center;
@@ -648,7 +644,7 @@ ul li:hover .line {
 
 .player {
     position: relative;
-    height: auto;
+    height: 100%;
     width: 20%;
     margin: 1%;
     float: left;
@@ -656,13 +652,12 @@ ul li:hover .line {
     left: 5% ;
     border: black;
     border-style: dotted;
+    border-width: 5px;
 }
 
 .player:hover{
     border-color: red;
-    border-style: dotted;
-    border-width: 5px;
-    animation: border-blink .6s steps(2, start) infinite;
+    animation: border-blink-reverse .6s steps(2, start) infinite;
     list-style-image: url('./images/indicator.png');
     list-style-position: inside;
 }
@@ -684,7 +679,9 @@ ul li:hover .line {
     margin: 10px 0;
     list-style-type: initial;
     list-style-position: inside;
+    font-size: 25px;
 }
+
 .player-info li::marker{
     color: black;
 }
@@ -897,6 +894,9 @@ ul li:hover .line {
 
 /* ==== animations ==== */
 
+/* using from and to has this bug where the text is darker */
+/* forced to do this ugly animation, trying to make it as smooth as possible */
+
 
 @keyframes border-blink {
     0% {
@@ -917,8 +917,22 @@ ul li:hover .line {
     }
 }
 
-/* using from and to has this bug where the text is darker */
-/* forced to do this ugly animation, trying to make it as smooth as possible */
+@keyframes border-blink-reverse {
+    0% {
+        border-color: red;
+    }
+    49% {
+        border-color: red;
+    }
+    50% {
+        border-color: black;
+    }
+    100% {
+        border-color: black;
+    }
+}
+
+/* ssame for this */
 
 @keyframes help-animation {
     0% {
@@ -1028,7 +1042,7 @@ ul li:hover .line {
     .item li {
         font-size: 17px;
     }
-    .player-info {
+    .player-info li {
         font-size: 17px;
     }
 }
